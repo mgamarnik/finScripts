@@ -19,8 +19,8 @@ pyd = 3
 
 
 # Screener Filters
-# allFilt = ['cap_smallover','geo_usa','ta_rsi_os30']
 allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
+# allFilt = ['cap_largeover','geo_usa','ta_rsi_os40']
 # allFilt = ['cap_largeover','geo_usa','ta_rsi_os30']
 # allFilt = ['cap_smallover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
 
@@ -47,6 +47,7 @@ allTicks = np.array(allTicks) #Extracting tickers into a separate array
 #Initialize arrays 
 openArr = [] #analyzed with trades still open
 outArr = []
+nSkipped = 0
 print("Analyzing %d stocks" % len(allTicks))
 for t in allTicks: #looping through each ticker and running the technical analysis
     print(t," ")
@@ -55,18 +56,21 @@ for t in allTicks: #looping through each ticker and running the technical analys
         perfDat = perfCalc(bs,nSells)    
         score = scoreCalc(perfDat)
         if nOpen > 0: #
-            #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price       realAvg,  ntFact, score]
+            #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price               realAvg,  ntFact, score]
             openArr.append([t,perfDat[0],perfDat[1],perfDat[2], perfDat[6], dOff, nOpen, fundDat[0], fundDat[1], fundDat[2], round(lastClose,2), score[0],score[1],score[2]]) #collecting outputted data into array
         else:
-            #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price     realAvg,  ntFact, score]
+            #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price              realAvg,  ntFact, score]
             outArr.append([t,perfDat[0],perfDat[1],perfDat[2], perfDat[6], dOff, nOpen, fundDat[0], fundDat[1], fundDat[2], round(lastClose,2), score[0],score[1],score[2]]) #collecting outputted data into array    
     except:
+        print("Skipped\n")
+        nSkipped += 1
         pass
 
 pd.set_option('display.max_columns', None)  
 pd.set_option('display.max_rows', None)  
 pd.set_option('display.expand_frame_repr', False)
 
+print("%d stocks skipped\n" % nSkipped)
 titles = ['Stock', '%prof', 'avgTrade%', 'nTrades','avgDays','openSeshs','numOpen','Industry','Sector', 'MarketCap', 'Price', 'realAvg','ntFact','Score']
 if len(openArr) == 0:
     print("\n No Open Tickers: ----------------------------------------------------------------\n")
@@ -81,3 +85,5 @@ dfOut = procRes(outArr,titles)
 print("\n Rest of Tickers: ----------------------------------------------------------------\n")
 print(dfOut)
 dfOut.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_REST.csv'))
+
+

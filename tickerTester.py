@@ -1,6 +1,6 @@
  #function with all the math
 from scoreCalc import scoreCalc
-import pendulum
+# import pendulum
 import pandas as pd
 import pandas_ta as ta
 import yfinance as yf
