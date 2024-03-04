@@ -9,9 +9,6 @@ from finviz.screener import Screener
 from datetime import date
 import schedule
 import time
-import smtplib
-from sendEmail import sendEmail
-from closeTester import closeTester
 #Analysis Settings------------------------------------------------
 
 def scheduledRunScript():
@@ -25,9 +22,9 @@ def scheduledRunScript():
 
 
     # Screener Filters
-    allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
-    # allFilt = ['cap_largeover','geo_usa','ta_rsi_os30']
-    # allFilt = ['cap_largeover','geo_usa','ta_rsi_os40']
+    # allFilt = ['cap_smallover','geo_usa','ta_rsi_os30']
+    # allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
+    allFilt = ['cap_largeover','geo_usa','ta_rsi_os30']
     # allFilt = ['cap_smallover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
 
     #Runscript----------------------------------------------------------
@@ -73,12 +70,9 @@ def scheduledRunScript():
     pd.set_option('display.max_rows', None)  
     pd.set_option('display.expand_frame_repr', False)
 
-    dfOpen = []
-    email_text = ""
     titles = ['Stock', '%prof', 'avgTrade%', 'nTrades','avgDays','openSeshs','numOpen','Industry','Sector', 'MarketCap', 'Price', 'realAvg','ntFact','Score']
     if len(openArr) == 0:
         print("\n No Open Tickers: ----------------------------------------------------------------\n")
-        email_text = "\n No Open Tickers"
     else:
         dfOpen = procRes(openArr,titles)
         print("\n Open Tickers: ----------------------------------------------------------------\n")
@@ -91,19 +85,14 @@ def scheduledRunScript():
     print(dfOut)
     dfOut.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_REST.csv'))
 
-    dfClose = closeTester()
-    sendEmail(dfOpen, dfClose) ##integrate close tester functionality and send output from that too
-
-schedule.every().monday.at("06:00").do(scheduledRunScript)
-schedule.every().tuesday.at("06:00").do(scheduledRunScript)
-schedule.every().wednesday.at("06:00").do(scheduledRunScript)
-schedule.every().thursday.at("06:00").do(scheduledRunScript)
-schedule.every().friday.at("06:00").do(scheduledRunScript)
-# schedule.every().saturday.at("14:51").do(scheduledRunScript)
+schedule.every().monday.at("07:00").do(scheduledRunScript)
+schedule.every().tuesday.at("07:00").do(scheduledRunScript)
+schedule.every().wednesday.at("07:00").do(scheduledRunScript)
+schedule.every().thursday.at("07:00").do(scheduledRunScript)
+schedule.every().friday.at("07:00").do(scheduledRunScript)
+schedule.every().saturday.at("10:50").do(scheduledRunScript)
 
 while True:
     schedule.run_pending()
     # Sleep for 24 hours
-    time.sleep(1800)
-
-scheduledRunScript()
+    time.sleep(1)

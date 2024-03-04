@@ -14,15 +14,18 @@ from datetime import date
 # algo = 'rsimd'
 # algo = 'rsimd2' #rsi<32.5, diffrsi14>0, diffsma50<0, diffmdHist>0 (better score, better backtest performance, more trades, less reliable signals)
 # algo = 'rsimd3' #rsi<32.5, diffrsi14>0, diffsma50<0, mdLine>signalLine, mdLine<0, signalLine<0 (worse everything but more reliable signals)
-algo = 'rsimd4' 
+# algo = 'rsimd4'
+algo = 'rsimdvol' 
 pyd = 3
 
 
 # Screener Filters
-allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
+allFilt = ['cap_smallover','geo_usa','ta_rsi_os30']
+# allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
 # allFilt = ['cap_largeover','geo_usa','ta_rsi_os40']
-# allFilt = ['cap_largeover','geo_usa','ta_rsi_os30']
 # allFilt = ['cap_smallover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
+# allFilt = ['ind_aerospacedefense','geo_usa']
+# allFilt = ['cap_smallover','geo_usa','sec_consumerdefensive']
 
 #Runscript----------------------------------------------------------
 
@@ -56,13 +59,13 @@ for t in allTicks: #looping through each ticker and running the technical analys
         perfDat = perfCalc(bs,nSells)    
         score = scoreCalc(perfDat)
         if nOpen > 0: #
-            #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price               realAvg,  ntFact, score]
+            #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price       realAvg,  ntFact, score]
             openArr.append([t,perfDat[0],perfDat[1],perfDat[2], perfDat[6], dOff, nOpen, fundDat[0], fundDat[1], fundDat[2], round(lastClose,2), score[0],score[1],score[2]]) #collecting outputted data into array
         else:
-            #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price              realAvg,  ntFact, score]
+            #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price     realAvg,  ntFact, score]
             outArr.append([t,perfDat[0],perfDat[1],perfDat[2], perfDat[6], dOff, nOpen, fundDat[0], fundDat[1], fundDat[2], round(lastClose,2), score[0],score[1],score[2]]) #collecting outputted data into array    
     except:
-        print("Skipped\n")
+        print("Skipped")
         nSkipped += 1
         pass
 
@@ -85,5 +88,3 @@ dfOut = procRes(outArr,titles)
 print("\n Rest of Tickers: ----------------------------------------------------------------\n")
 print(dfOut)
 dfOut.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_REST.csv'))
-
-

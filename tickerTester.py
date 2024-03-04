@@ -1,6 +1,6 @@
  #function with all the math
 from scoreCalc import scoreCalc
-# import pendulum
+import pendulum
 import pandas as pd
 import pandas_ta as ta
 import yfinance as yf
@@ -18,6 +18,7 @@ def tickerTester(tkr,tFrame,key,pyd):
 
     #Dataframe of close prices
     closes = df['Close']
+    vol = df['Volume']
     #List of times pulled from dataframe
     times = list(df.index)
 
@@ -27,6 +28,14 @@ def tickerTester(tkr,tFrame,key,pyd):
     ssma20 = ta.sma(closes,length=20)
     dssma20 = np.diff(ssma20)
 
+    dssma50 = dssma50[~np.isnan(dssma50)]
+    dssma20 = dssma20[~np.isnan(dssma20)]
+
+    #Volume SMA and Derivative--------------------------------------------------------------------------------------
+    volSma = ta.sma(vol,length = 15)
+    volDiff = np.diff(volSma)
+    volDiff = volDiff[~np.isnan(volDiff)]
+
     #Bollinger Band
     stdsma = 2*np.std(closes)
     devMid = 0.5*np.std(closes)
@@ -34,44 +43,51 @@ def tickerTester(tkr,tFrame,key,pyd):
     lMid = ssma20-devMid
 
     #RSI 14----------------------------------------------------------------------------------------------------------
-    xr = ta.rsi(closes, length = 14) #RSI Dataframe
-    xrL = list(xr) #List of RSI Values
-    xMa14 = ta.sma(xr, length = 14) #RSI Moving Average
+    xrL = ta.rsi(closes, length = 14) #RSI Dataframe
+    xMa14 = ta.sma(xrL, length = 14) #RSI Moving Average
+    # xMaDiff = np.diff(xMa14) #RSI Moving Average Derivative
     xMa14 = np.array(xMa14)
-    xMaDiff = np.diff(xMa14) #RSI Moving Average Derivative
-    # xMaDiff = xMa14[1:len(xMa14)]-xMa14[0:len(xMa14)-1] #RSI Moving Average Derivative
-    xmL = list(xMaDiff) #List of RSI MA Derivative
-    xmL = np.pad(xmL,(1,0)) #shifting rsi 14 gradient fwd 1 day
+    xMaDiff = xMa14[1:len(xMa14)]-xMa14[0:len(xMa14)-1] #RSI Moving Average Derivative
+    xmL = xMaDiff
+
+    xMa14 = xMa14[~np.isnan(xMa14)]
+    xrL = xrL[~np.isnan(xrL)]
+    xmL = xmL[~np.isnan(xmL)]
+    # print(xmL)
+
+
 
     #MACD------------------------------------------------------------------------------------------------------------
     xMacd = ta.macd(closes, fast=12, slow=26, signal=9, append=True) #MACD dataframe
     xMD = np.array(xMacd.MACD_12_26_9) #MACD Line as array
-    xMDh = xMacd.MACDh_12_26_9 #MACD Histogram as array
-    # xMDhDiff = ta.sma(xMDh,length=9)
-    xMDhDiff = np.array(xMDh)
+    xMDh = np.array(xMacd.MACDh_12_26_9) #MACD Histogram as array
     xMDs = np.array(xMacd.MACDs_12_26_9) #MACD Signal line as array
 
     #removing nans for math
     xMD = xMD[~np.isnan(xMD)]
-    xMDhDiff = xMDhDiff[~np.isnan(xMDh)]
+    xMDh = xMDh[~np.isnan(xMDh)]
     xMDs = xMDs[~np.isnan(xMDs)]
-    xMDhDiff = np.diff(xMDhDiff)
 
+    # print(len(times)-len(dssma50))
 
-    #cutting macd line to be same length as signal and hist
-    xMD = xMD[(len(xMD)-len(xMDs)):len(xMD)] 
-    mismat = len(times) - len(xMD) #recording data size mismatch
+    #cutting arrays to same length
+    times = times[(len(times)-len(dssma50)):len(times)] 
+    ssma20 = ssma20[(len(ssma20)-len(dssma50)):len(ssma20)] 
+    dssma20 = dssma20[(len(dssma20)-len(dssma50)):len(dssma20)] 
+    volDiff = volDiff[(len(volDiff)-len(dssma50)):len(volDiff)]
+    xMa14 = xMa14[(len(xMa14)-len(dssma50)):len(xMa14)] 
+    xrL = xrL[(len(xrL)-len(dssma50)):len(xrL)] 
+    xmL = xmL[(len(xmL)-len(dssma50)):len(xmL)]
+    xMD = xMD[(len(xMD)-len(dssma50)):len(xMD)] 
+    xMDh = xMDh[(len(xMDh)-len(dssma50)):len(xMDh)] 
+    xMDs = xMDs[(len(xMDs)-len(dssma50)):len(xMDs)] 
+    closes =  closes[(len(closes)-len(dssma50)):len(closes)] 
+
+    # mismat = len(times) - len(xMDs) #recording data size mismatch
 
     #MACD Crossunder Signal line indicator
     mdCO = abs(np.diff(np.floor((xMD-xMDs)/(max(abs(xMD-xMDs))))))
     mdCU = abs(np.diff(np.ceil((xMD-xMDs)/(max(abs(xMD-xMDs))))))
-
-    #Adding 0s to MACD arrays to be same length as time
-    mdCU = np.pad(mdCU,(mismat,0))
-    mdCO = np.pad(mdCO,(mismat,0))
-    xMD = np.pad(xMD,(mismat,0))
-    xMDhDiff = np.pad(xMDhDiff,(mismat,0))
-    xMDs = np.pad(xMDs,(mismat,0))
 
     # print("MDCU Indicator")
     # print(mdCU)
@@ -90,6 +106,7 @@ def tickerTester(tkr,tFrame,key,pyd):
     openTol = 10
     dateOpenMD = 0
     dateOpenRSI = 0
+    dateOpenVol = 0
     
     for i in range(len(closes)-1):
 
@@ -97,12 +114,13 @@ def tickerTester(tkr,tFrame,key,pyd):
         ci = closes[i]
         xri = xrL[i]
         xmi = xmL[i]
+        vi = volDiff[i]
         
         mdCOi = mdCO[i]
         mdCUi = mdCU[i]
         mdSi = xMDs[i]
         mdi = xMD[i]
-        mdHDi = xMDhDiff[i]
+        # mdHDi = xMDhDiff[i]
 
         dssmai50 = dssma50[i]
         dssmai20 = dssma20[i]
@@ -113,19 +131,8 @@ def tickerTester(tkr,tFrame,key,pyd):
         logicBuy = []
         logicSell = []
 
-        if key == 'bbmd':
-            logicBuy = (mdCOi == 1) & (dssmai20<0) & (mdSi<0) & (cInv < pyd) & (ci>lmi) & (ci<ssmai20)
-            logicSell = ((mdCUi == 1) & (mdSi>0) & (cInv > 0)) or ((xri >= 70) & (cInv > 0))
-        elif key == 'rsimd': #original rsi based buy signals only
-            logicBuy = (xmi>0) & (xri<32.5) & (dssmai50<0) & (cInv < pyd)
-            logicSell = (mdCUi == 1 or xri > 70) & (mdSi>0) & (cInv > 0)
-        elif key == 'rsimd2': #uses rsi and md histogram as buy indicator
-            logicBuy = (xmi>0) & (xri<32.5) & (dssmai50<0) & (mdHDi>0) & (cInv < pyd)
-            logicSell = (mdCUi == 1 or xri > 70) & (mdSi>0) & (cInv > 0)
-        elif key == 'rsimd3':
-            logicBuy = (mdi>mdSi) & (mdSi<0) & (mdi<0) & (xmi>0) & (xri<32.5) & (dssmai50<0) & (cInv < pyd)
-            logicSell = (mdCUi == 1 or xri > 70) & (mdSi>0) & (cInv > 0)
-        elif key == 'rsimd4': #uses rsi and md > signal as buy indicator
+
+        if key == 'rsimd4': #uses rsi and md > signal as buy indicator
             
             if (mdi>mdSi) & (mdSi<0) & (mdi<0):
                 dateOpenMD = openTol
@@ -138,8 +145,27 @@ def tickerTester(tkr,tFrame,key,pyd):
 
             dateOpenRSI -= 1
             dateOpenMD -= 1
+            dateOpenVol -= 1
             logicSell = (mdCUi == 1 or xri > 70) & (mdSi>0) & (cInv > 0)
-            # #           md>signal   signal<0    md<0    diffrsi14>0  rsi<32.5    diffsma50<0  pyramiding
+            #           md>signal   signal<0    md<0    diffrsi14>0  rsi<32.5    diffsma50<0  pyramiding
+        elif key == 'rsimdvol': 
+            if (mdi>mdSi) & (mdSi<0) & (mdi<0):
+                dateOpenMD = openTol
+
+            if (xmi>0) & (xri<32.5) & (dssmai50<0):
+                dateOpenRSI = openTol
+
+            if (vi>0):
+                dateOpenVol = openTol
+
+            if ((dateOpenMD + dateOpenRSI + dateOpenVol) > 20) & (cInv < pyd):
+                logicBuy = True
+
+            dateOpenRSI -= 1
+            dateOpenMD -= 1
+            dateOpenVol -= 1
+            logicSell = (mdCUi == 1 or xri > 70) & (mdSi>0) & (cInv > 0)
+            #           md>signal   signal<0    md<0    diffrsi14>0  rsi<32.5    diffsma50<0  pyramiding
         else:
             print("invalid key")
             break
