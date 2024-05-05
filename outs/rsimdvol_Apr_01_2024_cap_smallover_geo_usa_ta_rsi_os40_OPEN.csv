@@ -1,0 +1,23 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,EXTR,97.22,18.56,36,50.75,23,3,Communication Equipment,Technology,1.486,11.54,0.18,0.709,12.8
+1,SIRI,87.5,22.24,32,49.81,1,1,Entertainment,Communication Services,14.909,3.88,0.195,0.642,12.5
+2,AMC,66.67,22.0,21,37.43,133,3,Entertainment,Communication Services,0.979,3.72,0.147,0.561,8.23
+3,XMTR,100.0,38.09,6,40.5,2,3,Specialty Industrial Machinery,Industrials,0.82,16.89,0.381,0.148,5.64
+4,GNE,95.24,12.06,21,47.0,29,3,Utilities - Regulated Electric,Utilities,0.413,15.08,0.115,0.447,5.13
+5,RAPT,100.0,24.36,6,41.5,11,3,Biotechnology,Healthcare,0.312,8.98,0.244,0.145,3.52
+6,ARKO,100.0,19.3,6,36.5,2,3,Specialty Retail,Consumer Cyclical,0.684,5.7,0.193,0.164,3.17
+7,UNFI,66.67,4.02,39,55.69,1,2,Food Distribution,Consumer Defensive,0.683,11.49,0.027,0.7,1.88
+8,COUR,100.0,26.43,3,44.0,1,3,Education & Training Services,Consumer Defensive,2.2,14.02,0.264,0.068,1.8
+9,DBX,100.0,13.35,6,49.33,12,3,Software - Infrastructure,Technology,8.359,24.3,0.134,0.122,1.62
+10,ZIP,100.0,15.43,3,34.0,5,1,Staffing & Employment Services,Industrials,1.138,11.49,0.154,0.088,1.36
+11,TWKS,100.0,7.02,9,57.44,1,3,Information Technology Services,Technology,0.817,2.53,0.07,0.157,1.1
+12,PACB,47.62,5.83,21,55.38,1,3,Medical Devices,Healthcare,1.005,3.75,0.028,0.379,1.05
+13,IAS,100.0,7.07,6,46.5,4,3,Advertising Agencies,Communication Services,1.59,9.97,0.071,0.129,0.91
+14,NYCB,50.0,3.26,24,47.75,23,3,Banks - Regional,Financial Services,2.569,3.22,0.016,0.503,0.82
+15,HRZN,66.67,4.06,9,48.67,1,2,Asset Management,Financial Services,0.38,11.37,0.027,0.185,0.5
+16,FSLY,-33.33,-52.86,3,189.0,5,3,Software - Application,Technology,1.741,12.97,0.176,0.016,0.28
+17,MNTK,-33.33,-37.12,3,134.0,23,3,Utilities - Diversified,Utilities,0.598,4.16,0.124,0.022,0.28
+18,IRWD,12.5,-4.98,8,46.62,2,3,Drug Manufacturers - Specialty & Generic,Healthcare,1.363,8.71,-0.006,0.172,-0.11
+19,IRDM,25.0,-5.69,12,66.5,17,3,Telecom Services,Communication Services,3.203,26.16,-0.014,0.18,-0.26
+20,AEHR,51.85,-1.71,27,73.19,36,3,Semiconductor Equipment & Materials,Technology,0.358,12.4,-0.009,0.369,-0.33
+21,TTEC,55.56,-3.09,36,61.58,1,1,Information Technology Services,Technology,0.492,10.37,-0.017,0.585,-1.0

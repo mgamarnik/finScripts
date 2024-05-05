@@ -1,0 +1,28 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,SBAC,84.0,31.84,25,37.6,1,2,REIT - Specialty,Real Estate,21.605,199.95,0.267,0.665,17.78
+1,EXTR,92.31,15.25,39,51.28,2,3,Communication Equipment,Technology,1.616,12.55,0.141,0.761,10.71
+2,NEM,75.76,8.36,66,44.86,13,3,Gold,Basic Materials,34.413,29.86,0.063,1.471,9.32
+3,HUM,82.05,12.86,39,47.62,10,3,Healthcare Plans,Healthcare,43.761,362.7,0.106,0.819,8.64
+4,COLB,100.0,14.92,18,33.67,4,3,Banks - Regional,Financial Services,3.736,17.91,0.149,0.535,7.98
+5,PFE,78.0,7.77,50,47.78,69,3,Drug Manufacturers - General,Healthcare,151.842,26.89,0.061,1.046,6.34
+6,WOLF,74.36,9.9,39,46.23,6,3,Semiconductors,Technology,3.267,25.97,0.074,0.844,6.21
+7,GNE,95.24,11.9,21,47.14,11,3,Utilities - Regulated Electric,Utilities,0.492,17.94,0.113,0.445,5.05
+8,SSRM,85.19,10.19,27,47.56,13,3,Gold,Basic Materials,0.954,4.66,0.087,0.568,4.93
+9,NG,74.07,9.88,27,44.44,6,3,Gold,Basic Materials,0.795,2.37,0.073,0.608,4.45
+10,MED,60.42,6.08,48,50.69,13,3,Personal Services,Consumer Cyclical,0.455,41.75,0.037,0.947,3.48
+11,KW,72.22,9.92,18,41.06,1,1,Real Estate Services,Real Estate,1.184,8.52,0.072,0.438,3.14
+12,DCOM,80.95,4.63,21,38.95,1,1,Banks - Regional,Financial Services,0.714,18.39,0.037,0.539,2.02
+13,FWRD,47.62,5.16,21,51.81,8,3,Integrated Freight & Logistics,Industrials,1.237,40.15,0.025,0.405,1.0
+14,NYCB,50.0,3.26,24,47.75,1,3,Banks - Regional,Financial Services,3.386,4.69,0.016,0.503,0.82
+15,IRBT,55.56,4.5,18,63.0,9,3,"Furnishings, Fixtures & Appliances",Consumer Cyclical,0.328,11.78,0.025,0.286,0.71
+16,CRCT,100.0,8.73,3,44.0,57,3,Computer Hardware,Technology,1.07,4.88,0.087,0.068,0.6
+17,SAVE,55.56,2.26,18,60.17,12,3,Airlines,Industrials,0.695,6.35,0.013,0.299,0.38
+18,CNMD,52.38,0.91,42,62.79,5,3,Medical Devices,Healthcare,2.475,80.48,0.005,0.669,0.32
+19,MNTK,-33.33,-37.12,3,134.0,1,3,Utilities - Diversified,Utilities,0.842,5.86,0.124,0.022,0.28
+20,ADM,76.19,0.28,42,46.36,9,3,Farm Products,Consumer Defensive,28.157,52.79,0.002,0.906,0.19
+21,NVTS,0.0,-5.79,3,42.0,10,3,Semiconductors,Technology,1.026,5.73,-0.0,0.071,-0.0
+22,MKTX,47.83,-0.2,23,46.09,1,1,Capital Markets,Financial Services,8.111,213.97,-0.001,0.499,-0.05
+23,MDRX,55.56,-0.23,36,63.42,43,3,Health Information Services,Healthcare,0.83,7.6,-0.001,0.568,-0.07
+24,PBT,47.22,-0.94,36,57.67,39,3,Oil & Gas Midstream,Energy,0.615,13.19,-0.004,0.624,-0.28
+25,TMP,25.0,-20.72,12,148.0,13,3,Banks - Regional,Financial Services,0.683,47.74,-0.052,0.081,-0.42
+26,ATSG,37.5,-10.64,24,77.5,1,1,Airlines,Industrials,0.836,12.82,-0.04,0.31,-1.24

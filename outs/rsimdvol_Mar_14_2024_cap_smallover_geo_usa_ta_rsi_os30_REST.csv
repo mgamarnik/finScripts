@@ -1,0 +1,43 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,RUN,100.0,59.26,9,20.0,69,0,Solar,Technology,2.189,9.97,0.593,0.45,26.67
+1,DKL,100.0,123.0,3,24.0,973,0,Oil & Gas Refining & Marketing,Energy,1.852,39.23,1.23,0.125,15.38
+2,SIRI,87.5,22.24,32,49.81,177,0,Entertainment,Communication Services,15.908,4.14,0.195,0.642,12.5
+3,BLTE,100.0,96.39,3,25.0,157,0,Biotechnology,Healthcare,1.131,38.02,0.964,0.12,11.57
+4,AXGN,66.67,37.21,18,40.89,78,0,Medical Devices,Healthcare,0.348,8.05,0.248,0.44,10.92
+5,ENVX,100.0,47.54,6,27.5,60,0,Electrical Equipment & Parts,Industrials,1.336,7.93,0.475,0.218,10.37
+6,IART,90.32,12.64,31,38.77,60,0,Medical Devices,Healthcare,2.799,35.78,0.114,0.8,9.13
+7,MMSI,79.49,12.88,39,51.62,74,0,Medical Instruments & Supplies,Healthcare,4.229,73.01,0.102,0.756,7.74
+8,THO,71.19,7.35,59,45.83,647,0,Recreational Vehicles,Consumer Cyclical,5.477,102.72,0.052,1.287,6.74
+9,XMTR,100.0,38.09,6,40.5,190,0,Specialty Industrial Machinery,Industrials,0.849,17.48,0.381,0.148,5.64
+10,ARKO,100.0,14.14,12,35.25,487,0,Specialty Retail,Consumer Cyclical,0.701,5.84,0.141,0.34,4.81
+11,X,66.1,5.29,59,44.0,400,0,Steel,Basic Materials,9.186,40.86,0.035,1.341,4.69
+12,AMPH,100.0,13.56,11,34.27,338,0,Drug Manufacturers - Specialty & Generic,Healthcare,2.095,43.55,0.136,0.321,4.35
+13,SABR,100.0,26.31,9,57.0,155,0,Travel Services,Consumer Cyclical,0.729,1.92,0.263,0.158,4.15
+14,CRD-A,70.83,4.22,48,43.38,83,0,Insurance Brokers,Financial Services,0.39,8.02,0.03,1.107,3.31
+15,FL,53.66,4.56,82,62.95,101,0,Apparel Retail,Consumer Cyclical,2.183,23.18,0.024,1.303,3.19
+16,SIBN,100.0,30.55,3,29.0,53,0,Medical Devices,Healthcare,0.666,16.22,0.306,0.103,3.16
+17,TBBK,61.11,14.74,18,53.67,948,0,Banks - Regional,Financial Services,1.875,35.55,0.09,0.335,3.02
+18,MEI,64.1,5.26,39,49.77,66,0,Electronic Components,Technology,0.466,13.16,0.034,0.784,2.64
+19,ACAD,58.33,7.95,36,63.69,593,0,Biotechnology,Healthcare,3.223,19.56,0.046,0.565,2.62
+20,SMP,62.5,3.78,56,51.04,640,0,Auto Parts,Consumer Cyclical,0.683,31.14,0.024,1.097,2.59
+21,BA,64.71,4.22,51,54.59,80,0,Aerospace & Defense,Industrials,111.258,182.35,0.027,0.934,2.55
+22,TNGX,100.0,81.27,3,104.0,149,0,Biotechnology,Healthcare,0.94,9.22,0.813,0.029,2.34
+23,TXG,100.0,25.84,3,39.0,64,0,Health Information Services,Healthcare,4.59,38.52,0.258,0.077,1.99
+24,CRD-B,57.14,3.06,56,49.52,323,0,Insurance Brokers,Financial Services,0.39,7.81,0.017,1.131,1.98
+25,UNFI,66.67,4.02,39,55.69,63,0,Food Distribution,Consumer Defensive,0.721,12.13,0.027,0.7,1.88
+26,COUR,100.0,26.43,3,44.0,326,0,Education & Training Services,Consumer Defensive,2.313,14.74,0.264,0.068,1.8
+27,NARI,100.0,12.96,3,23.0,675,0,Medical Devices,Healthcare,2.383,41.11,0.13,0.13,1.69
+28,LUNG,66.67,43.25,3,57.0,281,0,Medical Devices,Healthcare,0.338,8.78,0.288,0.053,1.52
+29,TWKS,100.0,7.02,9,57.44,57,0,Information Technology Services,Technology,0.817,2.53,0.07,0.157,1.1
+30,LUV,65.62,2.44,32,47.91,66,0,Airlines,Industrials,16.874,28.28,0.016,0.668,1.07
+31,IAS,100.0,7.07,6,46.5,68,0,Advertising Agencies,Communication Services,1.562,9.79,0.071,0.129,0.91
+32,NOVA,66.67,3.71,9,48.33,64,0,Solar,Technology,0.57,4.65,0.025,0.186,0.46
+33,CNXC,-16.67,-17.38,6,85.0,99,0,Information Technology Services,Technology,4.198,63.32,0.029,0.071,0.2
+34,FNA,-33.33,-14.36,3,84.0,49,0,Medical Devices,Healthcare,0.775,9.36,0.048,0.036,0.17
+35,SAM,56.25,0.3,32,61.31,411,0,Beverages - Brewers,Consumer Defensive,3.588,298.35,0.002,0.522,0.09
+36,TPVG,41.67,0.79,12,59.5,399,0,Asset Management,Financial Services,0.352,9.35,0.003,0.202,0.07
+37,EB,41.67,-0.99,12,50.92,49,0,Software - Application,Technology,0.521,5.11,-0.004,0.236,-0.1
+38,IRWD,12.5,-4.98,8,46.62,2132,0,Drug Manufacturers - Specialty & Generic,Healthcare,1.352,8.64,-0.006,0.172,-0.11
+39,MPLN,11.11,-26.41,9,86.67,228,0,Health Information Services,Healthcare,0.528,0.82,-0.029,0.104,-0.3
+40,HDSN,53.33,-1.85,30,64.67,1123,0,Specialty Chemicals,Basic Materials,0.512,11.26,-0.01,0.464,-0.46
+41,TTEC,55.56,-3.09,36,61.58,49,0,Information Technology Services,Technology,0.516,10.87,-0.017,0.585,-1.0

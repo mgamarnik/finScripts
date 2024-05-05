@@ -1,0 +1,5 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,SSRM,72.0,6.07,25,45.4,30,3,Gold,Basic Materials,0.822,4.04,0.044,0.551,2.41
+1,IAS,100.0,7.07,6,46.5,1,1,Advertising Agencies,Communication Services,1.541,9.66,0.071,0.129,0.91
+2,CNMD,51.28,0.96,39,63.28,22,3,Medical Devices,Healthcare,2.32,75.36,0.005,0.616,0.3
+3,IRDM,25.0,-5.69,12,66.5,12,3,Telecom Services,Communication Services,3.186,26.02,-0.014,0.18,-0.26

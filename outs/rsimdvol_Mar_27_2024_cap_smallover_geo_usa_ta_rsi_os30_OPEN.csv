@@ -1,0 +1,13 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,XMTR,100.0,38.09,6,40.5,1,2,Specialty Industrial Machinery,Industrials,0.789,16.24,0.381,0.148,5.64
+1,GNE,95.24,12.06,21,47.0,27,3,Utilities - Regulated Electric,Utilities,0.403,14.74,0.115,0.447,5.13
+2,ARKO,100.0,14.14,12,35.25,1,2,Specialty Retail,Consumer Cyclical,0.643,5.36,0.141,0.34,4.81
+3,EMBC,100.0,24.73,6,37.0,7,3,Medical Instruments & Supplies,Healthcare,0.711,12.35,0.247,0.162,4.01
+4,COUR,100.0,26.43,3,44.0,1,1,Education & Training Services,Consumer Defensive,2.182,13.9,0.264,0.068,1.8
+5,TWKS,100.0,7.02,9,57.44,1,1,Information Technology Services,Technology,0.775,2.4,0.07,0.157,1.1
+6,PACB,47.62,5.83,21,55.38,1,1,Medical Devices,Healthcare,0.943,3.52,0.028,0.379,1.05
+7,IAS,100.0,7.07,6,46.5,2,3,Advertising Agencies,Communication Services,1.464,9.18,0.071,0.129,0.91
+8,MNTK,-33.33,-37.12,3,134.0,21,3,Utilities - Diversified,Utilities,0.55,3.83,0.124,0.022,0.28
+9,IRWD,12.5,-4.98,8,46.62,1,2,Drug Manufacturers - Specialty & Generic,Healthcare,1.302,8.32,-0.006,0.172,-0.11
+10,IRDM,25.0,-5.69,12,66.5,15,3,Telecom Services,Communication Services,3.133,25.59,-0.014,0.18,-0.26
+11,AEHR,51.85,-1.71,27,73.19,34,3,Semiconductor Equipment & Materials,Technology,0.322,11.17,-0.009,0.369,-0.33

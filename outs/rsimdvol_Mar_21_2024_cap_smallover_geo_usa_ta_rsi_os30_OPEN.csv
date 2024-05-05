@@ -1,0 +1,6 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,SSRM,72.0,6.07,25,45.4,29,3,Gold,Basic Materials,0.834,4.12,0.044,0.551,2.41
+1,FWRD,42.86,3.97,21,51.05,24,3,Integrated Freight & Logistics,Industrials,0.714,27.07,0.017,0.411,0.7
+2,SAVE,55.56,2.26,18,60.17,28,3,Airlines,Industrials,0.487,4.45,0.013,0.299,0.38
+3,CNMD,51.28,0.96,39,63.28,21,3,Medical Devices,Healthcare,2.342,76.09,0.005,0.616,0.3
+4,IRDM,25.0,-5.69,12,66.5,11,3,Telecom Services,Communication Services,3.229,26.37,-0.014,0.18,-0.26

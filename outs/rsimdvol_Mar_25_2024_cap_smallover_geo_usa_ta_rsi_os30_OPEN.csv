@@ -1,0 +1,10 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,GNE,95.24,12.06,21,47.0,25,3,Utilities - Regulated Electric,Utilities,0.412,15.05,0.115,0.447,5.13
+1,EMBC,100.0,24.73,6,37.0,5,3,Medical Instruments & Supplies,Healthcare,0.715,12.41,0.247,0.162,4.01
+2,SSRM,72.0,6.07,25,45.4,31,3,Gold,Basic Materials,0.823,4.03,0.044,0.551,2.41
+3,IAS,100.0,7.07,6,46.5,1,2,Advertising Agencies,Communication Services,1.514,9.49,0.071,0.129,0.91
+4,CNMD,51.28,0.96,39,63.28,23,3,Medical Devices,Healthcare,2.33,75.69,0.005,0.616,0.3
+5,CNXC,-16.67,-17.38,6,85.0,1,1,Information Technology Services,Technology,4.062,61.27,0.029,0.071,0.2
+6,AGL,16.67,0.57,6,50.0,77,3,Medical Care Facilities,Healthcare,2.003,4.89,0.001,0.12,0.01
+7,NVTS,0.0,-5.79,3,42.0,28,3,Semiconductors,Technology,0.765,4.27,-0.0,0.071,-0.0
+8,IRDM,25.0,-5.69,12,66.5,13,3,Telecom Services,Communication Services,3.155,25.77,-0.014,0.18,-0.26

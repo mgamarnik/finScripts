@@ -1,0 +1,27 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,SBAC,84.0,31.84,25,37.6,1,1,REIT - Specialty,Real Estate,22.417,207.78,0.267,0.665,17.78
+1,EXTR,92.31,15.25,39,51.28,1,3,Communication Equipment,Technology,1.616,12.55,0.141,0.761,10.71
+2,APA,72.22,17.24,36,46.17,12,3,Oil & Gas E&P,Energy,8.932,29.62,0.125,0.78,9.71
+3,NEM,75.76,8.36,66,44.86,12,3,Gold,Basic Materials,34.586,30.01,0.063,1.471,9.32
+4,HUM,82.05,12.86,39,47.62,9,3,Healthcare Plans,Healthcare,43.429,359.95,0.106,0.819,8.64
+5,COLB,100.0,14.92,18,33.67,3,3,Banks - Regional,Financial Services,3.698,17.73,0.149,0.535,7.98
+6,FSR,100.0,50.75,3,22.0,50,3,Auto Manufacturers,Consumer Cyclical,0.322,0.6,0.507,0.136,6.92
+7,WOLF,74.36,9.9,39,46.23,5,3,Semiconductors,Technology,3.217,25.57,0.074,0.844,6.21
+8,GNE,95.24,11.9,21,47.14,10,3,Utilities - Regulated Electric,Utilities,0.491,17.89,0.113,0.445,5.05
+9,SSRM,85.19,10.19,27,47.56,12,3,Gold,Basic Materials,0.954,4.68,0.087,0.568,4.93
+10,NG,74.07,9.88,27,44.44,5,3,Gold,Basic Materials,0.793,2.36,0.073,0.608,4.45
+11,MED,60.42,6.08,48,50.69,12,3,Personal Services,Consumer Cyclical,0.442,40.56,0.037,0.947,3.48
+12,FWRD,47.62,5.16,21,51.81,7,3,Integrated Freight & Logistics,Industrials,1.222,39.67,0.025,0.405,1.0
+13,NYCB,50.0,3.26,24,47.75,1,2,Banks - Regional,Financial Services,3.184,4.41,0.016,0.503,0.82
+14,IRBT,55.56,4.5,18,63.0,8,3,"Furnishings, Fixtures & Appliances",Consumer Cyclical,0.338,12.13,0.025,0.286,0.71
+15,CRCT,100.0,8.73,3,44.0,56,3,Computer Hardware,Technology,1.021,4.66,0.087,0.068,0.6
+16,SAVE,55.56,2.26,18,60.17,11,3,Airlines,Industrials,0.688,6.28,0.013,0.299,0.38
+17,CNMD,52.38,0.91,42,62.79,4,3,Medical Devices,Healthcare,2.463,80.08,0.005,0.669,0.32
+18,MNTK,-33.33,-37.12,3,134.0,1,2,Utilities - Diversified,Utilities,0.853,5.94,0.124,0.022,0.28
+19,ADM,76.19,0.28,42,46.36,8,3,Farm Products,Consumer Defensive,28.36,53.17,0.002,0.906,0.19
+20,AGL,16.67,0.57,6,50.0,58,3,Medical Care Facilities,Healthcare,2.505,6.17,0.001,0.12,0.01
+21,NVTS,0.0,-5.79,3,42.0,9,3,Semiconductors,Technology,1.017,5.68,-0.0,0.071,-0.0
+22,MDRX,55.56,-0.23,36,63.42,42,3,Health Information Services,Healthcare,0.908,8.31,-0.001,0.568,-0.07
+23,PBT,47.22,-0.94,36,57.67,38,3,Oil & Gas Midstream,Energy,0.61,13.08,-0.004,0.624,-0.28
+24,TMP,25.0,-20.72,12,148.0,12,3,Banks - Regional,Financial Services,0.687,48.01,-0.052,0.081,-0.42
+25,CLB,43.59,-1.57,39,57.38,59,3,Oil & Gas Equipment & Services,Energy,0.659,14.12,-0.007,0.68,-0.47

@@ -1,0 +1,8 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,SIRI,87.5,22.24,32,49.81,187,0,Entertainment,Communication Services,14.986,3.9,0.195,0.642,12.5
+1,HAIN,75.76,7.21,33,54.03,95,0,Packaged Foods,Consumer Defensive,0.712,7.93,0.055,0.611,3.34
+2,ACAD,58.33,7.95,36,63.69,603,0,Biotechnology,Healthcare,2.999,18.2,0.046,0.565,2.62
+3,TNGX,100.0,81.27,3,104.0,159,0,Biotechnology,Healthcare,0.822,7.7,0.813,0.029,2.34
+4,MEI,61.11,5.27,36,53.33,76,0,Electronic Components,Technology,0.417,11.78,0.032,0.675,2.17
+5,TRML,0.0,-13.09,6,59.83,289,0,Biotechnology,Healthcare,0.587,22.9,-0.0,0.1,-0.0
+6,PRFT,56.52,-2.04,23,63.87,82,0,Information Technology Services,Technology,1.904,54.46,-0.012,0.36,-0.42

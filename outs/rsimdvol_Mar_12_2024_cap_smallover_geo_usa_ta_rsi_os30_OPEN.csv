@@ -1,0 +1,8 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,EXTR,97.22,18.56,36,50.75,10,3,Communication Equipment,Technology,1.533,11.91,0.18,0.709,12.8
+1,MED,60.47,6.13,43,54.28,22,3,Personal Services,Consumer Cyclical,0.41,37.66,0.037,0.792,2.94
+2,SSRM,72.0,6.07,25,45.4,22,3,Gold,Basic Materials,0.883,4.36,0.044,0.551,2.41
+3,DBX,100.0,13.35,6,49.33,1,1,Software - Infrastructure,Technology,8.084,23.5,0.134,0.122,1.62
+4,FWRD,42.86,3.97,21,51.05,17,3,Integrated Freight & Logistics,Industrials,0.925,30.04,0.017,0.411,0.7
+5,SAVE,55.56,2.26,18,60.17,21,3,Airlines,Industrials,0.492,4.49,0.013,0.299,0.38
+6,MNTK,-33.33,-37.12,3,134.0,10,3,Utilities - Diversified,Utilities,0.687,4.78,0.124,0.022,0.28

@@ -1,0 +1,3 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,HUM,82.05,12.86,39,47.62,4,3,Healthcare Plans,Healthcare,44.27,366.92,0.106,0.819,8.64
+1,ADM,76.19,0.28,42,46.36,3,3,Farm Products,Consumer Defensive,28.616,53.65,0.002,0.906,0.19

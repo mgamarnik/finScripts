@@ -1,0 +1,7 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,MLKN,82.35,9.48,51,36.1,179,0,"Furnishings, Fixtures & Appliances",Consumer Cyclical,1.803,24.76,0.078,1.413,11.03
+1,MCI,100.0,9.18,18,41.67,2944,0,Asset Management,Financial Services,0.348,17.19,0.092,0.432,3.97
+2,HAIN,75.76,7.21,33,54.03,96,0,Packaged Foods,Consumer Defensive,0.706,7.86,0.055,0.611,3.34
+3,MEI,61.11,5.27,36,53.33,77,0,Electronic Components,Technology,0.431,12.18,0.032,0.675,2.17
+4,TRML,0.0,-13.09,6,59.83,290,0,Biotechnology,Healthcare,0.587,22.9,-0.0,0.1,-0.0
+5,HDSN,53.33,-1.85,30,64.67,1134,0,Specialty Chemicals,Basic Materials,0.501,11.01,-0.01,0.464,-0.46

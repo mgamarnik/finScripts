@@ -1,0 +1,4 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,AKAM,73.33,13.17,45,44.47,217,0,Software - Infrastructure,Technology,16.334,108.17,0.097,1.012,9.77
+1,WPC,93.33,7.14,15,44.2,148,0,REIT - Diversified,Real Estate,12.241,55.98,0.067,0.339,2.26
+2,WBD,33.33,-4.65,21,65.29,390,0,Entertainment,Communication Services,20.996,8.61,-0.015,0.322,-0.5

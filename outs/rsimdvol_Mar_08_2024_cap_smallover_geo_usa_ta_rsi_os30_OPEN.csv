@@ -1,0 +1,12 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,EXTR,97.22,18.56,36,50.75,8,3,Communication Equipment,Technology,1.545,12.0,0.18,0.709,12.8
+1,HUM,84.62,11.83,39,46.62,17,3,Healthcare Plans,Healthcare,41.109,340.72,0.1,0.837,8.37
+2,MED,60.47,6.13,43,54.28,20,3,Personal Services,Consumer Cyclical,0.415,38.09,0.037,0.792,2.94
+3,APPS,47.62,14.17,21,52.71,2,3,Software - Application,Technology,0.313,3.07,0.067,0.398,2.69
+4,SSRM,72.0,6.07,25,45.4,20,3,Gold,Basic Materials,0.907,4.48,0.044,0.551,2.41
+5,AMCX,66.67,10.33,12,49.75,1,2,Entertainment,Communication Services,0.525,12.05,0.069,0.241,1.66
+6,FWRD,42.86,3.97,21,51.05,15,3,Integrated Freight & Logistics,Industrials,0.964,31.3,0.017,0.411,0.7
+7,MLNK,100.0,13.51,3,63.0,4,3,Software - Application,Technology,1.396,18.31,0.135,0.048,0.64
+8,SAVE,55.56,2.26,18,60.17,19,3,Airlines,Industrials,0.558,5.1,0.013,0.299,0.38
+9,MNTK,-33.33,-37.12,3,134.0,8,3,Utilities - Diversified,Utilities,0.725,5.05,0.124,0.022,0.28
+10,LBRDA,33.33,-4.93,6,111.5,4,3,Telecom Services,Communication Services,8.098,56.47,-0.016,0.054,-0.09

@@ -1,0 +1,42 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,EXTR,97.22,18.56,36,50.75,29,3,Communication Equipment,Technology,1.429,11.1,0.18,0.709,12.8
+1,SIRI,87.5,22.24,32,49.81,5,3,Entertainment,Communication Services,12.988,3.38,0.195,0.642,12.5
+2,HUM,84.62,11.83,39,46.62,38,3,Healthcare Plans,Healthcare,38.214,317.0,0.1,0.837,8.37
+3,AMC,66.67,22.0,21,37.43,139,3,Entertainment,Communication Services,0.777,2.95,0.147,0.561,8.23
+4,COLD,100.0,18.97,9,25.78,7,3,REIT - Industrial,Real Estate,6.812,23.92,0.19,0.349,6.62
+5,QDEL,65.91,11.0,44,52.89,19,3,Medical Devices,Healthcare,2.898,43.35,0.073,0.832,6.03
+6,GNE,95.24,12.06,21,47.0,35,3,Utilities - Regulated Electric,Utilities,0.426,15.57,0.115,0.447,5.13
+7,ARKO,100.0,14.14,12,35.25,8,3,Specialty Retail,Consumer Cyclical,0.618,5.15,0.141,0.34,4.81
+8,EMBC,100.0,24.73,6,37.0,15,3,Medical Instruments & Supplies,Healthcare,0.699,12.14,0.247,0.162,4.01
+9,SITM,100.0,34.74,3,27.0,11,3,Semiconductors,Technology,1.936,84.77,0.347,0.111,3.86
+10,ACRE,50.0,56.56,6,52.5,21,3,REIT - Mortgage,Real Estate,0.389,7.15,0.283,0.114,3.23
+11,SIBN,100.0,30.55,3,29.0,5,2,Medical Devices,Healthcare,0.629,15.32,0.306,0.103,3.16
+12,TBBK,61.11,14.74,18,53.67,1,3,Banks - Regional,Financial Services,1.703,32.28,0.09,0.335,3.02
+13,MED,60.47,6.13,43,54.28,41,3,Personal Services,Consumer Cyclical,0.361,33.14,0.037,0.792,2.94
+14,ACAD,58.33,7.95,36,63.69,2,3,Biotechnology,Healthcare,2.933,17.8,0.046,0.565,2.62
+15,TNGX,100.0,81.27,3,104.0,1,2,Biotechnology,Healthcare,0.793,7.43,0.813,0.029,2.34
+16,MEI,61.11,5.27,36,53.33,4,3,Electronic Components,Technology,0.445,12.58,0.032,0.675,2.17
+17,UNFI,66.67,4.02,39,55.69,6,3,Food Distribution,Consumer Defensive,0.62,10.43,0.027,0.7,1.88
+18,NFBK,100.0,8.5,9,42.33,21,3,Banks - Regional,Financial Services,0.41,9.23,0.085,0.213,1.81
+19,COUR,100.0,26.43,3,44.0,7,3,Education & Training Services,Consumer Defensive,2.128,13.56,0.264,0.068,1.8
+20,AMCX,66.67,10.33,12,49.75,21,3,Entertainment,Communication Services,0.491,11.26,0.069,0.241,1.66
+21,DBX,100.0,13.35,6,49.33,18,3,Software - Infrastructure,Technology,8.008,23.28,0.134,0.122,1.62
+22,LUNG,66.67,43.25,3,57.0,12,3,Medical Devices,Healthcare,0.323,8.39,0.288,0.053,1.52
+23,TWKS,100.0,7.02,9,57.44,7,3,Information Technology Services,Technology,0.749,2.32,0.07,0.157,1.1
+24,PACB,47.62,5.83,21,55.38,7,3,Medical Devices,Healthcare,0.924,3.45,0.028,0.379,1.05
+25,AMPL,-33.33,-54.53,3,89.0,1,1,Software - Application,Technology,1.258,10.45,0.182,0.034,0.61
+26,HRZN,66.67,4.06,9,48.67,6,3,Asset Management,Financial Services,0.378,11.32,0.027,0.185,0.5
+27,IMKTA,71.43,1.71,21,52.43,16,3,Grocery Stores,Consumer Defensive,1.406,74.01,0.012,0.401,0.49
+28,FOXF,55.56,2.53,9,36.0,14,3,Auto Parts,Consumer Cyclical,1.924,45.81,0.014,0.25,0.35
+29,CNXC,-16.67,-17.38,6,85.0,9,3,Information Technology Services,Technology,3.917,59.74,0.029,0.071,0.2
+30,LBRDK,55.56,1.69,9,82.89,25,3,Telecom Services,Communication Services,7.484,52.41,0.009,0.109,0.1
+31,SAM,56.25,0.3,32,61.31,9,3,Beverages - Brewers,Consumer Defensive,3.567,297.0,0.002,0.522,0.09
+32,CHTR,33.33,-3.9,6,115.83,22,3,Telecom Services,Communication Services,39.425,273.05,-0.013,0.052,-0.07
+33,LBRDA,33.33,-4.93,6,111.5,25,3,Telecom Services,Communication Services,7.526,52.39,-0.016,0.054,-0.09
+34,IRWD,12.5,-4.98,8,46.62,8,3,Drug Manufacturers - Specialty & Generic,Healthcare,1.255,8.02,-0.006,0.172,-0.11
+35,ROKU,55.56,-3.14,9,93.33,16,3,Entertainment,Communication Services,8.733,60.85,-0.017,0.096,-0.17
+36,IRDM,25.0,-5.69,12,66.5,23,3,Telecom Services,Communication Services,3.113,25.42,-0.014,0.18,-0.26
+37,AEHR,51.85,-1.71,27,73.19,42,3,Semiconductor Equipment & Materials,Technology,0.336,11.63,-0.009,0.369,-0.33
+38,CRNC,22.22,-17.41,9,87.67,21,3,Software - Application,Technology,0.586,14.07,-0.039,0.103,-0.4
+39,TTEC,55.56,-3.09,36,61.58,5,3,Information Technology Services,Technology,0.424,8.95,-0.017,0.585,-1.0
+40,GPRO,61.11,-6.89,18,62.67,21,3,Consumer Electronics,Technology,0.309,2.06,-0.042,0.287,-1.21

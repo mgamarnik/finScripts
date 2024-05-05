@@ -1,0 +1,7 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,SBAC,84.0,31.84,25,37.6,302,0,REIT - Specialty,Real Estate,22.311,206.8,0.267,0.665,17.78
+1,AKAM,73.33,13.17,45,44.47,213,0,Software - Infrastructure,Technology,16.488,109.19,0.097,1.012,9.77
+2,GILD,66.67,14.52,21,49.71,455,0,Drug Manufacturers - General,Healthcare,89.192,71.58,0.097,0.422,4.09
+3,ALNY,100.0,8.45,18,43.67,1277,0,Biotechnology,Healthcare,18.514,147.0,0.084,0.412,3.48
+4,TWLO,77.78,1.38,9,57.67,1033,0,Internet Content & Information,Communication Services,10.607,58.59,0.011,0.156,0.17
+5,BIIB,54.55,0.02,33,54.27,456,0,Drug Manufacturers - General,Healthcare,31.846,219.08,0.0,0.608,0.01

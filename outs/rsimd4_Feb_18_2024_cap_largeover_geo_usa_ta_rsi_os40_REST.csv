@@ -1,0 +1,56 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,DXCM,90.0,26.13,30,35.9,60,0,Medical Devices,Healthcare,45.125,117.05,0.235,0.836,19.65
+1,SBAC,84.0,31.84,25,37.6,302,0,REIT - Specialty,Real Estate,22.311,206.8,0.267,0.665,17.78
+2,SPGI,93.65,9.7,63,37.52,66,0,Financial Data & Stock Exchanges,Financial Services,133.043,423.57,0.091,1.679,15.25
+3,RCL,75.76,27.94,33,48.52,374,0,Travel Services,Consumer Cyclical,29.768,116.09,0.212,0.68,14.4
+4,SIRI,83.33,21.12,36,48.03,160,0,Entertainment,Communication Services,18.444,4.8,0.176,0.75,13.19
+5,AMT,85.71,23.12,21,33.0,302,0,REIT - Specialty,Real Estate,87.233,187.13,0.198,0.636,12.61
+6,AKAM,73.33,13.17,45,44.47,213,0,Software - Infrastructure,Technology,16.488,109.19,0.097,1.012,9.77
+7,ADBE,77.08,13.32,48,52.25,306,0,Software - Infrastructure,Technology,247.09,546.66,0.103,0.919,9.43
+8,CAG,93.33,7.88,45,39.4,48,0,Packaged Foods,Consumer Defensive,13.007,27.21,0.074,1.142,8.4
+9,SNA,69.44,7.3,72,43.5,946,0,Tools & Accessories,Industrials,14.087,267.24,0.051,1.655,8.39
+10,MMM,87.88,6.06,66,42.05,53,0,Conglomerates,Industrials,50.434,91.25,0.053,1.57,8.36
+11,HRL,83.33,7.62,48,36.56,193,0,Packaged Foods,Consumer Defensive,15.853,28.99,0.063,1.313,8.34
+12,FDX,78.57,6.69,42,32.71,567,0,Integrated Freight & Logistics,Industrials,59.372,237.59,0.053,1.284,6.75
+13,AMGN,76.92,8.89,39,40.23,218,0,Drug Manufacturers - General,Healthcare,152.04,283.7,0.068,0.969,6.63
+14,DGX,90.91,10.13,33,46.18,57,0,Diagnostics & Research,Healthcare,13.818,124.0,0.092,0.715,6.58
+15,CCL,76.67,11.66,30,40.73,61,0,Travel Services,Consumer Cyclical,19.333,14.8,0.089,0.737,6.58
+16,APD,87.88,7.45,33,35.36,462,0,Specialty Chemicals,Basic Materials,50.429,226.85,0.065,0.933,6.11
+17,AAPL,76.47,7.53,51,50.22,1248,0,Consumer Electronics,Technology,2815.213,182.31,0.058,1.016,5.85
+18,LMT,83.33,7.74,30,38.1,69,0,Aerospace & Defense,Industrials,102.474,424.07,0.064,0.787,5.08
+19,ED,83.33,3.57,60,36.25,729,0,Utilities - Regulated Electric,Utilities,30.17,87.32,0.03,1.655,4.92
+20,DUK,91.67,6.4,24,30.0,1414,0,Utilities - Regulated Electric,Utilities,70.813,91.88,0.059,0.8,4.69
+21,VRSN,77.78,9.18,27,43.33,84,0,Software - Infrastructure,Technology,19.599,194.24,0.071,0.623,4.45
+22,GILD,66.67,14.52,21,49.71,455,0,Drug Manufacturers - General,Healthcare,89.192,71.58,0.097,0.422,4.09
+23,MCO,74.07,8.85,27,44.78,316,0,Financial Data & Stock Exchanges,Financial Services,67.852,370.76,0.066,0.603,3.95
+24,ALNY,100.0,8.45,18,43.67,1277,0,Biotechnology,Healthcare,18.514,147.0,0.084,0.412,3.48
+25,KMB,100.0,7.4,15,33.8,313,0,Household & Personal Products,Consumer Defensive,39.85,118.29,0.074,0.444,3.28
+26,TEAM,100.0,16.08,3,16.33,1780,0,Software - Application,Technology,53.915,207.84,0.161,0.184,2.95
+27,O,100.0,9.79,9,30.33,51,0,REIT - Retail,Real Estate,43.536,52.33,0.098,0.297,2.91
+28,OC,66.67,14.09,21,73.29,1307,0,Building Products & Equipment,Industrials,12.204,139.95,0.094,0.287,2.69
+29,BA,65.38,4.05,52,53.87,60,0,Aerospace & Defense,Industrials,124.4,203.89,0.026,0.965,2.56
+30,ROL,85.71,4.7,21,35.57,1026,0,Personal Services,Consumer Cyclical,19.863,41.05,0.04,0.59,2.38
+31,AZPN,81.82,3.65,33,41.73,51,0,Software - Application,Technology,11.614,182.75,0.03,0.791,2.36
+32,WPC,93.33,7.14,15,44.2,144,0,REIT - Diversified,Real Estate,12.552,57.4,0.067,0.339,2.26
+33,MU,45.83,6.26,48,72.25,1253,0,Semiconductors,Technology,87.761,79.5,0.029,0.664,1.91
+34,SO,83.33,3.67,24,39.08,1473,0,Utilities - Regulated Electric,Utilities,72.465,66.48,0.031,0.614,1.88
+35,CPB,72.22,2.25,54,48.43,55,0,Packaged Foods,Consumer Defensive,12.356,41.45,0.016,1.115,1.81
+36,REG,66.67,12.39,9,41.67,930,0,REIT - Retail,Real Estate,11.292,60.81,0.083,0.216,1.78
+37,CMCSA,66.67,4.46,27,45.78,308,0,Telecom Services,Communication Services,163.8,41.24,0.03,0.59,1.75
+38,HPE,91.67,5.6,12,36.92,925,0,Communication Equipment,Technology,19.409,14.93,0.051,0.325,1.67
+39,SJM,75.0,3.4,24,51.25,45,0,Packaged Foods,Consumer Defensive,13.171,124.09,0.026,0.468,1.19
+40,SNAP,47.37,5.94,19,51.84,355,0,Internet Content & Information,Communication Services,18.438,11.17,0.028,0.367,1.03
+41,EXPE,69.7,2.17,33,50.09,374,0,Travel Services,Consumer Cyclical,18.433,135.25,0.015,0.659,1.0
+42,VTR,62.96,2.98,27,57.74,301,0,REIT - Healthcare Facilities,Real Estate,17.612,43.76,0.019,0.468,0.88
+43,KVUE,100.0,8.24,3,65.0,32,0,Household & Personal Products,Consumer Defensive,36.481,19.05,0.082,0.046,0.38
+44,DE,54.55,1.01,33,52.27,2057,0,Farm & Heavy Construction Machinery,Industrials,100.987,360.68,0.006,0.631,0.35
+45,TWLO,77.78,1.38,9,57.67,1033,0,Internet Content & Information,Communication Services,10.607,58.59,0.011,0.156,0.17
+46,NDAQ,57.14,0.18,21,49.52,402,0,Financial Data & Stock Exchanges,Financial Services,31.975,55.42,0.001,0.424,0.04
+47,BIIB,54.55,0.02,33,54.27,456,0,Drug Manufacturers - General,Healthcare,31.846,219.08,0.0,0.608,0.01
+48,CSCO,57.14,0.02,21,60.71,807,0,Communication Equipment,Technology,196.835,48.44,0.0,0.346,0.0
+49,KHC,33.33,-0.37,18,55.0,96,0,Packaged Foods,Consumer Defensive,42.228,34.81,-0.001,0.327,-0.04
+50,CHTR,33.33,-3.66,6,116.0,302,0,Telecom Services,Communication Services,42.551,293.0,-0.012,0.052,-0.06
+51,DOCU,55.56,-2.27,9,85.67,49,0,Software - Application,Technology,10.242,50.22,-0.013,0.105,-0.13
+52,ROKU,55.56,-2.9,9,93.67,64,0,Entertainment,Communication Services,10.26,72.0,-0.016,0.096,-0.15
+53,ZM,22.22,-20.93,9,89.33,322,0,Software - Application,Technology,18.911,62.12,-0.047,0.101,-0.47
+54,TTWO,45.83,-4.12,24,55.0,412,0,Electronic Gaming & Multimedia,Communication Services,26.164,153.38,-0.019,0.436,-0.82
