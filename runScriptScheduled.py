@@ -9,6 +9,9 @@ from finviz.screener import Screener
 from datetime import date
 import schedule
 import time
+from closeTesterScheduled import closeTester
+from sendEmail import sendEmail
+
 #Analysis Settings------------------------------------------------
 
 def scheduledRunScript():
@@ -17,14 +20,14 @@ def scheduledRunScript():
     # algo = 'rsimd'
     # algo = 'rsimd2' #rsi<32.5, diffrsi14>0, diffsma50<0, diffmdHist>0 (better score, better backtest performance, more trades, less reliable signals)
     # algo = 'rsimd3' #rsi<32.5, diffrsi14>0, diffsma50<0, mdLine>signalLine, mdLine<0, signalLine<0 (worse everything but more reliable signals)
-    algo = 'rsimd4' 
+    algo = 'rsimdvol' 
     pyd = 3
 
 
     # Screener Filters
-    # allFilt = ['cap_smallover','geo_usa','ta_rsi_os30']
+    allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
     # allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
-    allFilt = ['cap_largeover','geo_usa','ta_rsi_os30']
+    # allFilt = ['cap_largeover','geo_usa','ta_rsi_os30']
     # allFilt = ['cap_smallover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
 
     #Runscript----------------------------------------------------------
@@ -85,14 +88,20 @@ def scheduledRunScript():
     print(dfOut)
     dfOut.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_REST.csv'))
 
+    dfClose = closeTester()
+
+    sendEmail(dfOpen,dfClose)
+
+
 schedule.every().monday.at("07:00").do(scheduledRunScript)
 schedule.every().tuesday.at("07:00").do(scheduledRunScript)
 schedule.every().wednesday.at("07:00").do(scheduledRunScript)
 schedule.every().thursday.at("07:00").do(scheduledRunScript)
 schedule.every().friday.at("07:00").do(scheduledRunScript)
-schedule.every().saturday.at("10:50").do(scheduledRunScript)
+# schedule.every().saturday.at("18:25").do(scheduledRunScript)
 
 while True:
     schedule.run_pending()
-    # Sleep for 24 hours
-    time.sleep(1)
+    print("Run pending: ")
+    # Sleep for 30 mins
+    time.sleep(1800)
