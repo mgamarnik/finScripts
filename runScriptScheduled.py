@@ -25,8 +25,8 @@ def scheduledRunScript():
 
 
     # Screener Filters
-    allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
     # allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
+    allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
     # allFilt = ['cap_largeover','geo_usa','ta_rsi_os30']
     # allFilt = ['cap_smallover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
 
@@ -93,15 +93,15 @@ def scheduledRunScript():
     sendEmail(dfOpen,dfClose)
 
 
-schedule.every().monday.at("07:00").do(scheduledRunScript)
-schedule.every().tuesday.at("07:00").do(scheduledRunScript)
-schedule.every().wednesday.at("07:00").do(scheduledRunScript)
-schedule.every().thursday.at("07:00").do(scheduledRunScript)
-schedule.every().friday.at("07:00").do(scheduledRunScript)
-# schedule.every().saturday.at("18:25").do(scheduledRunScript)
+# schedule.every().monday.at("07:00").do(scheduledRunScript)
+# schedule.every().tuesday.at("07:00").do(scheduledRunScript)
+# schedule.every().wednesday.at("07:00").do(scheduledRunScript)
+# schedule.every().thursday.at("07:00").do(scheduledRunScript)
+# schedule.every().friday.at("07:00").do(scheduledRunScript)
+schedule.every().sunday.at("17:36").do(scheduledRunScript)
 
 while True:
     schedule.run_pending()
     print("Run pending: ")
     # Sleep for 30 mins
-    time.sleep(1800)
+    time.sleep(1)
