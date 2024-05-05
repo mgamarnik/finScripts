@@ -11,7 +11,7 @@ import pandas_ta as ta
 
 # key = 'bbmd'
 key = 'rsimd'
-tkr = 'jwn'
+tkr = 'aci'
 days = 365
 datInterval = '1d'
 pyd = 3
@@ -21,13 +21,15 @@ off = False
 #ID Ticker of interest and pull data
 dat = yf.Ticker(tkr)
 dInfo = dat.info #Ticker info
-# print(dInfo)
-df = dat.history(period = tFrame, interval = '1d') #Ticker Dataframe
+print(dInfo)
+beta = dInfo['forwardPE']
+print(beta)
+# df = dat.history(period = tFrame, interval = '1d') #Ticker Dataframe
 
-#Dataframe of close prices
-closes = df['Close']
-vol = df['Volume']
-print(vol)
+# #Dataframe of close prices
+# closes = df['Close']
+# vol = df['Volume']
+# print(vol)
 
 # #initializing long and exit arrays
 # lArr = []

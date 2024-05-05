@@ -1,6 +1,5 @@
  #function with all the math
 from scoreCalc import scoreCalc
-import pendulum
 import pandas as pd
 import pandas_ta as ta
 import yfinance as yf
@@ -164,7 +163,7 @@ def tickerTester(tkr,tFrame,key,pyd):
             dateOpenRSI -= 1
             dateOpenMD -= 1
             dateOpenVol -= 1
-            logicSell = (mdCUi == 1 or xri > 70) & (mdSi>0) & (cInv > 0)
+            logicSell = (((mdCUi == 1) & (mdSi>0)) or (xri >= 70))  & (cInv > 0)
             #           md>signal   signal<0    md<0    diffrsi14>0  rsi<32.5    diffsma50<0  pyramiding
         else:
             print("invalid key")
@@ -214,7 +213,7 @@ def tickerTester(tkr,tFrame,key,pyd):
         mk = dInfo['marketCap']
 
     fundData = [dInfo['industry'], dInfo['sector'], round(dInfo['marketCap']/10**9,3), dInfo['previousClose']]
-
+    
 
     return bs, nSells, dOffset, abs(lInd+1), fundData, closes[-1] #buy/sell matrix, number of sell signals, days since last buy/sell, number of open buys, ticker fundamental data
 

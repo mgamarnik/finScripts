@@ -7,7 +7,7 @@ import yfinance as yf
 from procRes import procRes
 import pandas as pd
 from scoreCalc import scoreCalc
-from perfCalc import perfCalc
+from perfCalcCash import perfCalc
 
 
 
@@ -15,18 +15,20 @@ from perfCalc import perfCalc
 # algo = 'rsimd4'
 algo = 'rsimdvol'
 # algo = 'rsimd2'
-t = 'hum'
+t = 'mmm'
 pyd = 3
-tFrame = 'max'
+tFrame = 'Max'
 off = False 
 
 
-bs, nSells, dOff, nOpen, fundDat, lastClose = tickerTester(t,tFrame,algo,pyd) #calculate buy/sell signals and extract close prices
-# print(np.transpose(np.transpose(bs)))   
+bs, nSells, dOff, nOpen, fundDat, lastClose = tickerTester(t,tFrame,algo,pyd) #calculate buy/sell signals and extract close price
+# print(bs)
+# print(np.transpose(np.transpose(bs)))
 perfDat = perfCalc(bs,nSells)
 # print(perfDat)
+# print(perfDat[7])
 score = scoreCalc(perfDat)
-# print(score)
+# # print(score)
 
 
 

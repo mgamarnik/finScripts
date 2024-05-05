@@ -20,8 +20,8 @@ pyd = 3
 
 
 # Screener Filters
-# allFilt = ['cap_smallover','geo_usa','ta_rsi_os30']
 allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
+# allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
 # allFilt = ['cap_largeover','geo_usa','ta_rsi_os40']
 # allFilt = ['cap_smallover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
 # allFilt = ['ind_aerospacedefense','geo_usa']
