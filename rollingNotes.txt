@@ -26,9 +26,10 @@ todo dev:
 todo raspberrypi:
 -fix vpn situation
 -add title to email
--merge github files and learn how to properly use with pushing/pulling code
+
 
 Done:
+-merge github files and learn how to properly use with pushing/pulling code
 -study on how md hist derivative and second deriv look during buy and sell days
 -searching rsi<30 is misleading since threshold for buy is at 32.5, thus missing some stocks
 --search at <30 and <40 to cover all bases
