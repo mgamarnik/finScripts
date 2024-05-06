@@ -1,0 +1,100 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,APA,71.79,17.93,39,45.08,17,0,Oil & Gas E&P,Energy,10.861,29.26,0.129,0.865,11.14
+1,BMY,81.25,4.98,48,47.1,79,0,Drug Manufacturers - General,Healthcare,89.172,43.99,0.04,1.019,4.12
+2,FTNT,61.11,7.09,18,57.56,83,0,Software - Infrastructure,Technology,44.945,58.88,0.043,0.313,1.35
+3,LKQ,46.67,2.88,15,54.0,85,0,Auto Parts,Consumer Cyclical,11.698,43.85,0.013,0.278,0.37
+4,EL,70.0,4.51,30,45.9,86,0,Household & Personal Products,Consumer Defensive,47.667,132.94,0.032,0.654,2.06
+5,ILMN,79.49,21.81,39,41.56,96,0,Diagnostics & Research,Healthcare,18.781,117.93,0.173,0.938,16.27
+6,ALGN,86.67,16.1,30,41.13,96,0,Medical Devices,Healthcare,21.671,287.87,0.14,0.729,10.18
+7,KMX,64.58,8.64,48,56.77,96,0,Auto & Truck Dealerships,Consumer Cyclical,10.814,68.71,0.056,0.846,4.72
+8,EW,61.11,5.93,18,49.33,97,0,Medical Devices,Healthcare,51.372,85.25,0.036,0.365,1.32
+9,BEN,92.86,10.3,42,33.76,98,0,Asset Management,Financial Services,12.302,23.38,0.096,1.244,11.9
+10,GPN,85.71,9.79,14,41.79,98,0,Specialty Business Services,Industrials,28.427,111.37,0.084,0.335,2.81
+11,LUV,65.62,2.39,32,47.72,102,0,Airlines,Industrials,15.65,26.15,0.016,0.671,1.05
+12,JNPR,56.67,3.77,30,48.7,104,0,Communication Equipment,Technology,11.323,34.84,0.021,0.616,1.32
+13,BAX,60.53,1.78,38,51.61,104,0,Medical Instruments & Supplies,Healthcare,18.798,36.89,0.011,0.736,0.79
+14,WY,77.27,8.45,44,45.7,104,0,REIT - Specialty,Real Estate,22.665,31.09,0.065,0.963,6.29
+15,CBRE,100.0,18.68,19,51.11,105,0,Real Estate Services,Real Estate,26.585,86.61,0.187,0.372,6.94
+16,IQV,100.0,24.13,9,27.0,105,0,Diagnostics & Research,Healthcare,40.698,223.37,0.241,0.333,8.04
+17,DLTR,76.67,8.75,30,40.03,105,0,Discount Stores,Consumer Defensive,26.317,120.73,0.067,0.749,5.03
+18,PLD,85.0,7.66,20,35.15,105,0,REIT - Industrial,Real Estate,98.038,105.89,0.065,0.569,3.7
+19,DG,66.67,0.28,12,54.0,106,0,Discount Stores,Consumer Defensive,30.203,137.49,0.002,0.222,0.04
+20,YUM,80.95,2.14,21,48.57,108,0,Restaurants,Consumer Cyclical,37.817,134.34,0.017,0.432,0.75
+21,COO,64.91,10.11,57,41.89,108,0,Medical Instruments & Supplies,Healthcare,18.015,90.64,0.066,1.361,8.93
+22,GEHC,100.0,1.04,3,61.0,109,0,Health Information Services,Healthcare,36.275,79.47,0.01,0.049,0.05
+23,ABT,77.78,4.46,18,52.0,111,0,Medical Devices,Healthcare,184.227,105.9,0.035,0.346,1.2
+24,GEN,74.29,9.65,35,53.03,115,0,Software - Infrastructure,Technology,12.757,20.03,0.072,0.66,4.73
+25,CLX,78.79,7.45,33,45.91,115,0,Household & Personal Products,Consumer Defensive,17.167,138.23,0.059,0.719,4.22
+26,AME,84.21,6.07,38,39.11,117,0,Specialty Industrial Machinery,Industrials,38.554,166.56,0.051,0.972,4.97
+27,DRI,89.66,10.8,29,31.14,124,0,Restaurants,Consumer Cyclical,17.814,149.25,0.097,0.931,9.02
+28,VRSN,76.0,8.9,25,43.28,137,0,Software - Infrastructure,Technology,16.759,168.26,0.068,0.578,3.91
+29,CVS,50.0,0.25,56,50.14,149,0,Healthcare Plans,Healthcare,70.175,55.9,0.001,1.117,0.14
+30,EPAM,50.0,4.55,6,27.5,196,0,Information Technology Services,Technology,14.025,242.12,0.023,0.218,0.5
+31,MSCI,80.0,9.62,15,34.27,200,0,Financial Data & Stock Exchanges,Financial Services,37.001,467.04,0.077,0.438,3.37
+32,CI,65.22,2.78,46,49.57,208,0,Healthcare Plans,Healthcare,97.011,341.5,0.018,0.928,1.68
+33,EMR,86.21,6.19,29,42.1,259,0,Specialty Industrial Machinery,Industrials,60.909,106.54,0.053,0.689,3.68
+34,AKAM,73.33,12.76,45,43.93,266,0,Software - Infrastructure,Technology,15.271,99.67,0.094,1.024,9.58
+35,MANH,72.22,11.92,36,41.47,315,0,Software - Application,Technology,12.976,210.76,0.086,0.868,7.47
+36,MA,100.0,15.04,12,44.75,354,0,Credit Services,Financial Services,412.359,443.58,0.15,0.268,4.03
+37,SWK,75.0,7.56,44,45.57,355,0,Tools & Accessories,Industrials,13.203,85.8,0.057,0.966,5.47
+38,TRMB,70.18,6.17,57,50.07,359,0,Scientific & Technical Instruments,Technology,13.659,55.93,0.043,1.138,4.93
+39,INTC,56.76,1.09,37,63.16,360,0,Semiconductors,Technology,131.537,30.9,0.006,0.586,0.36
+40,DASH,100.0,39.46,3,19.0,369,0,Internet Content & Information,Communication Services,46.538,113.81,0.395,0.158,6.23
+41,CSX,63.64,3.55,33,47.36,369,0,Railroads,Industrials,66.174,33.85,0.023,0.697,1.57
+42,MRO,79.66,12.05,59,41.29,417,0,Oil & Gas E&P,Energy,14.857,26.34,0.096,1.429,13.72
+43,HAL,81.48,12.63,54,39.2,418,0,Oil & Gas Equipment & Services,Energy,32.517,36.73,0.103,1.378,14.18
+44,CAT,90.79,9.18,76,42.28,423,0,Farm & Heavy Construction Machinery,Industrials,164.689,336.75,0.083,1.798,14.98
+45,EXPE,69.7,2.14,33,50.0,427,0,Travel Services,Consumer Cyclical,15.278,115.33,0.015,0.66,0.98
+46,SYK,87.5,6.23,24,43.25,428,0,Medical Devices,Healthcare,125.123,328.45,0.055,0.555,3.02
+47,TGT,76.74,5.0,43,43.56,431,0,Discount Stores,Consumer Defensive,73.114,158.04,0.038,0.987,3.79
+48,ORLY,95.0,11.63,20,49.2,436,0,Specialty Retail,Consumer Cyclical,59.791,1012.95,0.11,0.407,4.49
+49,JBHT,84.0,10.47,25,37.84,437,0,Integrated Freight & Logistics,Industrials,17.089,165.6,0.088,0.661,5.81
+50,PATH,-33.33,-10.94,3,60.0,464,0,Software - Infrastructure,Technology,11.084,19.48,0.036,0.05,0.18
+51,SBUX,48.0,-1.57,25,65.16,475,0,Restaurants,Consumer Cyclical,82.812,73.11,-0.008,0.384,-0.29
+52,OTIS,0.0,-0.51,3,60.67,476,0,Specialty Industrial Machinery,Industrials,37.246,92.12,-0.0,0.049,-0.0
+53,IEX,78.95,5.6,38,41.32,476,0,Specialty Industrial Machinery,Industrials,16.685,220.42,0.044,0.92,4.07
+54,MAS,87.88,20.3,33,35.7,477,0,Building Products & Equipment,Industrials,15.32,69.56,0.178,0.924,16.49
+55,ITW,88.37,8.34,43,35.95,492,0,Specialty Industrial Machinery,Industrials,72.786,243.92,0.074,1.196,8.82
+56,ROST,77.78,7.12,54,43.39,514,0,Apparel Retail,Consumer Cyclical,43.872,130.84,0.055,1.245,6.89
+57,NET,100.0,10.2,3,45.0,521,0,Software - Infrastructure,Technology,25.281,74.4,0.102,0.067,0.68
+58,CRM,66.67,9.87,12,39.25,522,0,Software - Application,Technology,265.45,273.66,0.066,0.306,2.01
+59,FAST,85.19,11.16,27,33.52,534,0,Industrial Distribution,Industrials,39.179,68.43,0.095,0.805,7.66
+60,CMI,70.27,6.43,74,46.07,574,0,Specialty Industrial Machinery,Industrials,38.4,280.74,0.045,1.606,7.26
+61,IBM,57.14,3.42,63,48.89,594,0,Information Technology Services,Technology,152.222,165.71,0.02,1.289,2.52
+62,TAP,67.92,3.39,53,46.06,612,0,Beverages - Brewers,Consumer Defensive,12.267,57.85,0.023,1.151,2.65
+63,ADSK,87.5,10.3,32,37.78,624,0,Software - Application,Technology,46.032,215.19,0.09,0.847,7.63
+64,BMRN,80.0,7.64,30,42.6,855,0,Biotechnology,Healthcare,15.654,82.44,0.061,0.704,4.3
+65,OXY,73.17,13.8,41,38.32,865,0,Oil & Gas E&P,Energy,57.079,64.39,0.101,1.07,10.8
+66,VLO,74.51,3.98,51,51.75,870,0,Oil & Gas Refining & Marketing,Energy,51.672,156.84,0.03,0.986,2.92
+67,CSCO,52.63,-0.47,19,61.0,870,0,Communication Equipment,Technology,190.798,47.12,-0.002,0.311,-0.08
+68,MAR,100.0,15.24,20,45.5,980,0,Lodging,Consumer Cyclical,67.004,234.59,0.152,0.44,6.7
+69,CF,44.44,1.19,18,58.67,981,0,Agricultural Inputs,Basic Materials,13.542,74.09,0.005,0.307,0.16
+70,HST,87.5,8.65,48,37.44,983,0,REIT - Hotel & Motel,Real Estate,13.335,18.65,0.076,1.282,9.7
+71,HLT,100.0,24.43,6,35.5,983,0,Lodging,Consumer Cyclical,49.394,197.54,0.244,0.169,4.13
+72,MPC,94.44,24.2,18,32.67,984,0,Oil & Gas Refining & Marketing,Energy,64.318,182.55,0.229,0.551,12.59
+73,SLB,50.0,0.04,38,53.89,984,0,Oil & Gas Equipment & Services,Energy,68.122,47.66,0.0,0.705,0.01
+74,JBL,74.36,9.48,39,44.69,984,0,Electronic Components,Technology,14.136,117.22,0.07,0.873,6.15
+75,WRB,63.93,3.17,61,42.25,984,0,Insurance - Property & Casualty,Financial Services,21.071,78.56,0.02,1.444,2.93
+76,SWKS,69.23,11.79,39,49.05,986,0,Semiconductors,Technology,14.843,92.51,0.082,0.795,6.49
+77,TXT,71.93,4.45,57,53.04,986,0,Aerospace & Defense,Industrials,16.322,85.59,0.032,1.075,3.44
+78,COP,75.0,5.39,24,41.5,991,0,Oil & Gas E&P,Energy,142.952,122.23,0.04,0.578,2.34
+79,PSX,33.33,-2.5,6,41.0,999,0,Oil & Gas Refining & Marketing,Energy,60.884,143.61,-0.008,0.146,-0.12
+80,RS,58.33,3.36,24,40.04,1001,0,Steel,Basic Materials,16.641,289.78,0.02,0.599,1.17
+81,IT,96.3,11.98,27,44.07,1001,0,Information Technology Services,Technology,33.276,428.64,0.115,0.613,7.07
+82,PCAR,68.29,7.14,41,39.56,1002,0,Farm & Heavy Construction Machinery,Industrials,54.917,104.78,0.049,1.036,5.05
+83,NUE,48.57,1.99,35,51.91,1002,0,Steel,Basic Materials,41.737,173.92,0.01,0.674,0.65
+84,DINO,63.01,3.11,73,38.51,1002,0,Oil & Gas Refining & Marketing,Energy,10.729,54.42,0.02,1.896,3.71
+85,CDW,100.0,15.92,6,29.5,1003,0,Information Technology Services,Technology,29.508,219.56,0.159,0.203,3.24
+86,GWW,82.0,5.62,50,43.38,1008,0,Industrial Distribution,Industrials,45.789,931.94,0.046,1.153,5.31
+87,ODFL,100.0,14.14,15,39.2,1311,0,Trucking,Industrials,40.269,185.06,0.141,0.383,5.41
+88,ANSS,100.0,14.89,12,43.0,1320,0,Software - Application,Technology,27.894,319.52,0.149,0.279,4.16
+89,SAIA,83.33,10.43,18,62.39,1321,0,Trucking,Industrials,10.61,400.08,0.087,0.289,2.51
+90,POOL,66.67,-3.38,12,51.92,1365,0,Industrial Distribution,Industrials,13.977,364.65,-0.023,0.231,-0.52
+91,CAH,72.22,4.58,36,46.17,1418,0,Medical Distribution,Healthcare,24.091,98.91,0.033,0.78,2.58
+92,COR,79.17,7.3,24,38.62,1653,0,Medical Distribution,Healthcare,44.667,223.95,0.058,0.621,3.59
+93,MOH,83.33,12.58,18,50.5,1954,0,Healthcare Plans,Healthcare,19.9,339.68,0.105,0.356,3.74
+94,CG,66.67,6.76,9,37.33,2056,0,Asset Management,Financial Services,14.751,41.06,0.045,0.241,1.09
+95,LECO,73.33,5.21,15,52.67,2066,0,Tools & Accessories,Industrials,12.687,222.93,0.038,0.285,1.09
+96,GGG,74.55,6.43,55,36.87,3147,0,Specialty Industrial Machinery,Industrials,13.889,82.12,0.048,1.492,7.15
+97,V,100.0,8.59,3,94.0,3408,0,Credit Services,Financial Services,549.357,268.49,0.086,0.032,0.27
+98,ROP,53.33,3.26,15,50.4,5446,0,Software - Application,Technology,55.363,517.21,0.017,0.298,0.52

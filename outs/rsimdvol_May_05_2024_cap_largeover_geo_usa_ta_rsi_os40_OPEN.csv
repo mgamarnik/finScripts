@@ -1,0 +1,9 @@
+,Stock,%prof,avgTrade%,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,realAvg,ntFact,Score
+0,CTSH,88.89,14.49,18,50.78,1,1,Information Technology Services,Technology,32.939,66.25,0.129,0.354,4.57
+1,GILD,66.67,16.77,18,42.0,1,1,Drug Manufacturers - General,Healthcare,80.779,64.78,0.112,0.429,4.79
+2,IDXX,70.59,6.34,17,51.71,1,2,Diagnostics & Research,Healthcare,39.691,480.6,0.045,0.329,1.47
+3,ULTA,41.67,-2.79,12,70.75,2,3,Specialty Retail,Consumer Cyclical,19.182,397.39,-0.012,0.17,-0.2
+4,EQIX,80.0,19.33,30,47.3,6,3,REIT - Specialty,Real Estate,66.415,699.81,0.155,0.634,9.81
+5,BF-A,84.13,5.28,63,35.41,11,3,Beverages - Wineries & Distilleries,Consumer Defensive,22.801,48.85,0.044,1.779,7.9
+6,BF-B,90.0,8.92,30,28.8,13,3,Beverages - Wineries & Distilleries,Consumer Defensive,22.801,47.92,0.08,1.042,8.36
+7,SIRI,84.38,20.88,32,48.22,24,3,Entertainment,Communication Services,12.001,3.12,0.176,0.664,11.69
