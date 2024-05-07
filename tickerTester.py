@@ -163,7 +163,7 @@ def tickerTester(tkr,tFrame,key,pyd):
             dateOpenRSI -= 1
             dateOpenMD -= 1
             dateOpenVol -= 1
-            logicSell = (((mdCUi == 1) & (mdSi>0)) or (xri >= 70))  & (cInv > 0)
+            logicSell = (((mdCUi == 1) & (mdSi>0)) or (xri >= 67.5))  & (cInv > 0)
             #           md>signal   signal<0    md<0    diffrsi14>0  rsi<32.5    diffsma50<0  pyramiding
         else:
             print("invalid key")
