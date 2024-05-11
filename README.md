@@ -20,8 +20,10 @@
  - prior to running, figure out what set of data you want as output (industry specific averages within the sector? sector averages?)
 
 # ideas:
--also implement volatility based position sizing
--implement stock loss sell at 15% or some value (try with backtester first)
+- update volume buy signal to be divergence signal not just volume positive sma
+- dmi or adx to asses price direction or strength
+- also implement volatility based position sizing
+- implement stock loss sell at 15% or some value (try with backtester first)
 - use chatgpt to pull current news stories for the stock
 - figure out if you can calculate fundamental data like beta, p/e or other at a point in stock history while doing backtesting to see if there is a clear trend
 - perform portfolio level backtest on set of 1000 or so stocks, use perfCalcCash as starting point? (1000 bs arrays over 5 yr period, sparse matrix calc)
