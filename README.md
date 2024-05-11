@@ -4,7 +4,6 @@
 - include market cap or other fundamental data in score calc? perhaps 2 scores, one technical one fundamental
 - incorporate beta into score calc or as independent metric
 - add "watchlist" section after open section in runscript output for stocks that are close to open
-- improve notetaking method, maybe use github project to track tasks/code fixes?
 -  figure out better buy method rather than adding 10 for each buy and subtracting 1 per day
  - do proper trade comparing performance of doing >0 or >20 or >10 for buy threshold
 - score heavily swayed by nTrades/nDaysHeld, ntrades and ndaysheld should be compared to industry average for that stock
@@ -48,6 +47,7 @@
 # Sources:
 
 # Done/archived:
+- improve notetaking method, maybe use github project to track tasks/code fixes?
 - figure out how to properly use github
  - develop new code/strat on pc, push to git, on raspberry pi pull from git to update
 - study on how md hist derivative and second deriv look during buy and sell days
