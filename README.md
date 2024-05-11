@@ -20,6 +20,8 @@
  - prior to running, figure out what set of data you want as output (industry specific averages within the sector? sector averages?)
 
 # ideas:
+-also implement volatility based position sizing
+-implement stock loss sell at 15% or some value (try with backtester first)
 - use chatgpt to pull current news stories for the stock
 - figure out if you can calculate fundamental data like beta, p/e or other at a point in stock history while doing backtesting to see if there is a clear trend
 - perform portfolio level backtest on set of 1000 or so stocks, use perfCalcCash as starting point? (1000 bs arrays over 5 yr period, sparse matrix calc)
@@ -40,6 +42,8 @@
 - several losing positions were bought when indicators were relatively level for a period of time prior to the buy signal while price was in steady decline with now real show of momentum or divergence 
 - to increase returns, rebalance portfolio to 75/25 etf/stock
  - become more consistent with buying/selling stock and increase stock portfolio size to diversify
+
+# Sources:
 
 # Done/archived:
 - figure out how to properly use github
