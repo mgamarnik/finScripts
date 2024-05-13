@@ -1,7 +1,7 @@
 
 import numpy as np
 
-def perfCalc(bs,nSells):
+def perfCalc(bs, nSells, cap):
 
     oDate = []
     perf = []
@@ -39,6 +39,7 @@ def perfCalc(bs,nSells):
                         if spidx>bpidx:
                             net = spp-bpp #change in price
                             pdiff = (spp-bpp)/bpp*100 #pdiff between sell and buy
+                            cap += cap*pdiff/100                            
                             perf.append([[net],[pdiff],[bpp],[spp],[spidx-bpidx]]) #net change in price, percent difference, buy price, sell price
                     buys = [] #array to assembly all buy signals corresponding to the sell signal
 
@@ -63,4 +64,4 @@ def perfCalc(bs,nSells):
         nProf = '0'
         pProf = '0' 
 
-    return [pProf, avgTrade, len(perf), oDate, bs, perf, avgDays] #Percent Profitability, Average Trade Percentage, Number of Trades, latest buy signal, buy/sell array, perf array
+    return [pProf, avgTrade, len(perf), oDate, bs, perf, avgDays, cap] #Percent Profitability, Average Trade Percentage, Number of Trades, latest buy signal, buy/sell array, perf array

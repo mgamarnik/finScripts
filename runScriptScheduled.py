@@ -21,7 +21,8 @@ def scheduledRunScript():
     # algo = 'rsimd2' #rsi<32.5, diffrsi14>0, diffsma50<0, diffmdHist>0 (better score, better backtest performance, more trades, less reliable signals)
     # algo = 'rsimd3' #rsi<32.5, diffrsi14>0, diffsma50<0, mdLine>signalLine, mdLine<0, signalLine<0 (worse everything but more reliable signals)
     algo = 'rsimdvol' 
-    pyd = 3
+    pyd = 1
+    cap = 1
 
 
     # Screener Filters
@@ -57,15 +58,17 @@ def scheduledRunScript():
     for t in allTicks: #looping through each ticker and running the technical analysis
         print(t," ")
         try: 
-            bs, nSells, dOff, nOpen, fundDat, lastClose = tickerTester(t,'max',algo,pyd) #calculate buy/sell signals and extract close prices
-            perfDat = perfCalc(bs,nSells)    
+            bs, nSells, dOff, nOpen, fundDat, lastClose, pAge = tickerTester(t,'max',algo,pyd) #calculate buy/sell signals and extract close prices
+            perfDat = perfCalc(bs,nSells, cap)    
             score = scoreCalc(perfDat)
+            activityFactor = round(perfDat[2]*perfDat[6]/pAge*100,2)
+            earningPerc = round((perfDat[-1]-cap)/cap*100,2)
             if nOpen > 0: #
-                #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price       realAvg,  ntFact, score]
-                openArr.append([t,perfDat[0],perfDat[1],perfDat[2], perfDat[6], dOff, nOpen, fundDat[0], fundDat[1], fundDat[2], round(lastClose,2), score[0],score[1],score[2]]) #collecting outputted data into array
+                #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price       earning percentage,  activityFactor, score]
+                openArr.append([t,perfDat[0],perfDat[1],perfDat[2], perfDat[6], dOff, nOpen, fundDat[0], fundDat[1], fundDat[2], round(lastClose,2), earningPerc, activityFactor,score[2]]) #collecting outputted data into array
             else:
-                #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price     realAvg,  ntFact, score]
-                outArr.append([t,perfDat[0],perfDat[1],perfDat[2], perfDat[6], dOff, nOpen, fundDat[0], fundDat[1], fundDat[2], round(lastClose,2), score[0],score[1],score[2]]) #collecting outputted data into array    
+                #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price     earning percentage,  activityFactor, score]
+                outArr.append([t,perfDat[0],perfDat[1],perfDat[2], perfDat[6], dOff, nOpen, fundDat[0], fundDat[1], fundDat[2], round(lastClose,2), earningPerc, activityFactor,score[2]]) #collecting outputted data into array    
         except:
             pass
 
@@ -73,7 +76,7 @@ def scheduledRunScript():
     pd.set_option('display.max_rows', None)  
     pd.set_option('display.expand_frame_repr', False)
 
-    titles = ['Stock', '%prof', 'avgTrade%', 'nTrades','avgDays','openSeshs','numOpen','Industry','Sector', 'MarketCap', 'Price', 'realAvg','ntFact','Score']
+    titles = ['Stock', '%prof', 'avgTrade%', 'nTrades','avgDays','openSeshs','numOpen','Industry','Sector', 'MarketCap', 'Price', 'Earning%','ActFact','Score']
     if len(openArr) == 0:
         print("\n No Open Tickers: ----------------------------------------------------------------\n")
     else:

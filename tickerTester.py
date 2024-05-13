@@ -215,7 +215,7 @@ def tickerTester(tkr,tFrame,key,pyd):
     fundData = [dInfo['industry'], dInfo['sector'], round(dInfo['marketCap']/10**9,3), dInfo['previousClose']]
     
 
-    return bs, nSells, dOffset, abs(lInd+1), fundData, closes[-1] #buy/sell matrix, number of sell signals, days since last buy/sell, number of open buys, ticker fundamental data
+    return bs, nSells, dOffset, abs(lInd+1), fundData, closes[-1], len(closes) #buy/sell matrix, number of sell signals, days since last buy/sell, number of open buys, ticker fundamental data
 
 
 
