@@ -9,6 +9,9 @@
 - score heavily swayed by nTrades/nDaysHeld, ntrades and ndaysheld should be compared to industry average for that stock
 
 # studies
+- research difference between leading and lagging indicators and how to combine them in algo
+ - trend indicators (typically use moving averages and id price trend), momentum indicators (track speed at which price changes, can analyze volume), volatility indicators (ratio of maximu to minimum price movements, bollinger bands), volume indicators
+ - leading indicators better in range bound/horizontal markets, lagging better in trending markets
 - standardize method of doing studies, very unorganized now and untracible for the future
  - perform study, record result, implement change to master code or create new algo
 - compare stock performance at every buy/sell to gspc buy/sell to see if trend exists
