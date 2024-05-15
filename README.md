@@ -19,6 +19,7 @@
  - prior to running, figure out what set of data you want as output (industry specific averages within the sector? sector averages?)
 
 # ideas:
+- use ML or optimization to refine RSI, MACD, and other parameters to better fit specific stock being analyzed to maximize profit (maybe more of a study?)
 - update volume buy signal to be divergence signal not just volume positive sma
 - dmi or adx to asses price direction or strength
 - also implement volatility based position sizing
