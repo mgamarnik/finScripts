@@ -1,6 +1,8 @@
 # code improvement:
+- Reintroduce plotting as a main feature within code, need to be able to see buy/sell signals, indicators, trendlines etc
+ - Should use tradingview as support not the only plot to look at
 - upgrade runscript to be its own function/clean up runscript
-- figure out why so many tickers are skipped
+- figure out why so many tickers are skipped (solution implemented in offline version, push to git)
 - include market cap or other fundamental data in score calc? perhaps 2 scores, one technical one fundamental
 - incorporate beta into score calc or as independent metric
 - add "watchlist" section after open section in runscript output for stocks that are close to open
