@@ -21,7 +21,7 @@ def closeTester():
     print("Analyzing: ")
     for t in rsimd: #looping through each ticker and running the technical analysis
         print(t," ")
-        bs, nSells, dOff, nOpen, fundDat, lastClose = tickerTester(t,'max','rsimdvol',pyd) #calculate buy/sell signals and extract close prices
+        bs, nSells, dOff, nOpen, fundDat, lastClose, pAge = tickerTester(t,'max','rsimdvol',pyd) #calculate buy/sell signals and extract close prices
         try:
             if nOpen == 0: #if an open trade currently does NOT exist
                 perfDat = perfCalc(bs,nSells)   
