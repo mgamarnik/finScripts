@@ -1,6 +1,8 @@
 # code improvement:
+- Reintroduce plotting as a main feature within code, need to be able to see buy/sell signals, indicators, trendlines etc
+ - Should use tradingview as support not the only plot to look at
 - upgrade runscript to be its own function/clean up runscript
-- figure out why so many tickers are skipped
+- figure out why so many tickers are skipped (solution implemented in offline version, push to git)
 - include market cap or other fundamental data in score calc? perhaps 2 scores, one technical one fundamental
 - incorporate beta into score calc or as independent metric
 - add "watchlist" section after open section in runscript output for stocks that are close to open
@@ -9,9 +11,6 @@
 - score heavily swayed by nTrades/nDaysHeld, ntrades and ndaysheld should be compared to industry average for that stock
 
 # studies
-- research difference between leading and lagging indicators and how to combine them in algo
- - trend indicators (typically use moving averages and id price trend), momentum indicators (track speed at which price changes, can analyze volume), volatility indicators (ratio of maximu to minimum price movements, bollinger bands), volume indicators
- - leading indicators better in range bound/horizontal markets, lagging better in trending markets
 - standardize method of doing studies, very unorganized now and untracible for the future
  - perform study, record result, implement change to master code or create new algo
 - compare stock performance at every buy/sell to gspc buy/sell to see if trend exists
@@ -22,6 +21,7 @@
  - prior to running, figure out what set of data you want as output (industry specific averages within the sector? sector averages?)
 
 # ideas:
+- use ML or optimization to refine RSI, MACD, and other parameters to better fit specific stock being analyzed to maximize profit (maybe more of a study?)
 - update volume buy signal to be divergence signal not just volume positive sma
 - dmi or adx to asses price direction or strength
 - also implement volatility based position sizing
