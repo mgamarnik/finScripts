@@ -1,2 +1,3 @@
-import finviz
-print(finviz.get_stock('appl'))
+from closeTesterScheduled import closeTester
+
+closeTester()

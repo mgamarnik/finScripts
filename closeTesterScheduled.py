@@ -10,7 +10,8 @@ def closeTester():
     # Pull Tickers
     tkrs = pd.read_csv("open.txt")
     # print(tkrs)
-    pyd = 3
+    pyd = 1
+    cap = 1
     rsimd = np.array(tkrs.Open[:]) #Extracting tickers into a separate array
     rsimd = rsimd[~pd.isnull(rsimd)]
 
@@ -24,16 +25,16 @@ def closeTester():
         bs, nSells, dOff, nOpen, fundDat, lastClose, pAge = tickerTester(t,'max','rsimdvol',pyd) #calculate buy/sell signals and extract close prices
         try:
             if nOpen == 0: #if an open trade currently does NOT exist
-                perfDat = perfCalc(bs,nSells)   
+                perfDat = perfCalc(bs,nSells, cap)   
                 # print(perfDat) 
-                lastMove = perfDat[-2][-1]
+                lastMove = perfDat[-3][-1]
                 # print(bs[-1])
-
-                cRSIMD.append([t,round(lastMove[0][0],2),int(lastMove[1][0]),round(lastMove[2][0],2),round(lastMove[3][0],2)])
+                sellDate = bs[-1][2]
+                cRSIMD.append([t,sellDate,round(lastMove[0][0],2),int(lastMove[1][0]),round(lastMove[2][0],2),round(lastMove[3][0],2)])
         except:
             pass
     pd.set_option('display.max_columns', None)  
-    dfrsimd = pd.DataFrame(cRSIMD,columns = ['Stock', 'Price Move', 'pDiff', 'Buy Price','Sell Price'])
+    dfrsimd = pd.DataFrame(cRSIMD,columns = ['Stock','Date', 'Price Move', 'pDiff', 'Buy Price','Sell Price'])
     print(dfrsimd)
     
     return dfrsimd

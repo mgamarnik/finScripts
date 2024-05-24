@@ -15,13 +15,13 @@ from perfCalcCash import perfCalc
 # algo = 'rsimd4'
 algo = 'rsimdvol'
 # algo = 'rsimd2'
-t = 'mmm'
-pyd = 3
+t = 'car'
+pyd = 1
 tFrame = 'Max'
 off = False 
 
 
-bs, nSells, dOff, nOpen, fundDat, lastClose = tickerTester(t,tFrame,algo,pyd) #calculate buy/sell signals and extract close price
+bs, nSells, dOff, nOpen, fundDat, lastClose, pAge = tickerTester(t,tFrame,algo,pyd) #calculate buy/sell signals and extract close price
 # print(bs)
 # print(np.transpose(np.transpose(bs)))
 perfDat = perfCalc(bs,nSells)
