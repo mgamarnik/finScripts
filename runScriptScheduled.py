@@ -54,22 +54,26 @@ def scheduledRunScript():
     #Initialize arrays 
     openArr = [] #analyzed with trades still open
     outArr = []
+    nSkipped = 0
     print("Analyzing %d stocks" % len(allTicks))
     for t in allTicks: #looping through each ticker and running the technical analysis
         print(t," ")
         try: 
             bs, nSells, dOff, nOpen, fundDat, lastClose, pAge = tickerTester(t,'max',algo,pyd) #calculate buy/sell signals and extract close prices
-            perfDat = perfCalc(bs,nSells, cap)    
-            score = scoreCalc(perfDat)
-            activityFactor = round(perfDat[2]*perfDat[6]/pAge*100,2)
-            earningPerc = round((perfDat[-1]-cap)/cap*100,2)
-            if nOpen > 0: #
-                #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price       earning percentage,  activityFactor, score]
-                openArr.append([t,perfDat[0],perfDat[1],perfDat[2], perfDat[6], dOff, nOpen, fundDat[0], fundDat[1], fundDat[2], round(lastClose,2), earningPerc, activityFactor,score[2]]) #collecting outputted data into array
-            else:
-                #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price     earning percentage,  activityFactor, score]
-                outArr.append([t,perfDat[0],perfDat[1],perfDat[2], perfDat[6], dOff, nOpen, fundDat[0], fundDat[1], fundDat[2], round(lastClose,2), earningPerc, activityFactor,score[2]]) #collecting outputted data into array    
+            if len(bs)!=0 and nSells!=0:
+                perfDat = perfCalc(bs,nSells, cap)    
+                score = scoreCalc(perfDat)
+                activityFactor = round(perfDat[2]*perfDat[6]/pAge*100,2)
+                earningPerc = round((perfDat[-1]-cap)/cap*100,2)
+                if nOpen > 0: #
+                    #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price       earning percentage,  activityFactor, score]
+                    openArr.append([t,perfDat[0],perfDat[1],perfDat[2], perfDat[6], dOff, nOpen, fundDat[0], fundDat[1], fundDat[2], round(lastClose,2), earningPerc, activityFactor,score[2]]) #collecting outputted data into array
+                else:
+                    #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price     earning percentage,  activityFactor, score]
+                    outArr.append([t,perfDat[0],perfDat[1],perfDat[2], perfDat[6], dOff, nOpen, fundDat[0], fundDat[1], fundDat[2], round(lastClose,2), earningPerc, activityFactor,score[2]]) #collecting outputted data into array    
         except:
+            print("Skipped")
+            nSkipped += 1
             pass
 
     pd.set_option('display.max_columns', None)  
