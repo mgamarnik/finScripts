@@ -1,3 +1,5 @@
 from closeTesterScheduled import closeTester
+from sendEmail	import sendEmail
 
-closeTester()
+closedTicks = closeTester()
+sendEmail([],closedTicks)
