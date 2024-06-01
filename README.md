@@ -1,8 +1,9 @@
 # code improvement:
+- DERIVATIVES INCORRECTLY CALCULATED, FIX IN ALL SCRIPTS
 - Reintroduce plotting as a main feature within code, need to be able to see buy/sell signals, indicators, trendlines etc
  - Should use tradingview as support not the only plot to look at
+- Update algo to sell if time holding has extended 2x avg or a certain number of days and profit is <0
 - upgrade runscript to be its own function/clean up runscript
-- figure out why so many tickers are skipped (solution implemented in offline version, push to git)
 - include market cap or other fundamental data in score calc? perhaps 2 scores, one technical one fundamental
 - incorporate beta into score calc or as independent metric
 - add "watchlist" section after open section in runscript output for stocks that are close to open
@@ -11,6 +12,8 @@
 - score heavily swayed by nTrades/nDaysHeld, ntrades and ndaysheld should be compared to industry average for that stock
 
 # studies
+- look at how varying sma, macd, rsi average lengths can be optimized to best fit industry or specific stock being looked at
+- Run a study looking at how fast the gain or loss in a stock is attained relative to time held. I.e. are most gains seen within 5days of holding?ratio of earnings to hold time
 - standardize method of doing studies, very unorganized now and untracible for the future
  - perform study, record result, implement change to master code or create new algo
 - compare stock performance at every buy/sell to gspc buy/sell to see if trend exists
@@ -21,11 +24,13 @@
  - prior to running, figure out what set of data you want as output (industry specific averages within the sector? sector averages?)
 
 # ideas:
-- use ML or optimization to refine RSI, MACD, and other parameters to better fit specific stock being analyzed to maximize profit (maybe more of a study?)
 - update volume buy signal to be divergence signal not just volume positive sma
+- use ML or optimization to refine RSI, MACD, and other parameters to better fit specific stock being analyzed to maximize profit (maybe more of a study?)
 - dmi or adx to asses price direction or strength
 - also implement volatility based position sizing
 - implement stock loss sell at 15% or some value (try with backtester first)
+ - or run a study looking at which stop loss position is best and how does it vary with volatility
+ - use beta or volatility index (as function of time in backtest) to inform stop loss position and size of buy position
 - use chatgpt to pull current news stories for the stock
 - figure out if you can calculate fundamental data like beta, p/e or other at a point in stock history while doing backtesting to see if there is a clear trend
 - perform portfolio level backtest on set of 1000 or so stocks, use perfCalcCash as starting point? (1000 bs arrays over 5 yr period, sparse matrix calc)
@@ -50,6 +55,7 @@
 # Sources:
 
 # Done/archived:
+- figure out why so many tickers are skipped (solution implemented in offline version, push to git)
 - improve notetaking method, maybe use github project to track tasks/code fixes?
 - figure out how to properly use github
  - develop new code/strat on pc, push to git, on raspberry pi pull from git to update
