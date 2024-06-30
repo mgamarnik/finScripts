@@ -13,7 +13,7 @@ def sendEmail(dfOpen, dfClose):
 
     # Test send mail
     sent_from = YOUR_GOOGLE_EMAIL
-    email_text = str(dfClose) + "\n" + str(dfOpen) 
+    email_text = str(dfOpen) + "\n" + str(dfClose) 
     email_subj = 'Todays Stocks'
     message = 'Subject: {}\n\n{}'.format(email_subj, email_text)
     smtpserver.sendmail(sent_from, sent_to, email_text)
