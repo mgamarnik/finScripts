@@ -26,6 +26,7 @@ def scheduledRunScript():
 
 
     # Screener Filters
+    # allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
     allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
     # allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
     # allFilt = ['cap_largeover','geo_usa','ta_rsi_os30']
