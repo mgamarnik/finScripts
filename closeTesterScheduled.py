@@ -1,17 +1,12 @@
 import numpy as np
-from tickerTester import tickerTester
+from tickerTesterV2 import tickerTesterV2
 import pandas as pd
-from perfCalc import perfCalc
-from scoreCalc import scoreCalc
-from procRes import procRes
 
 #Close tester
-def closeTester():
+def closeTester(algo, pyd, cap):
     # Pull Tickers
     tkrs = pd.read_csv("open.txt")
     # print(tkrs)
-    pyd = 1
-    cap = 1
     rsimd = np.array(tkrs.Open[:]) #Extracting tickers into a separate array
     rsimd = rsimd[~pd.isnull(rsimd)]
 
@@ -22,16 +17,16 @@ def closeTester():
     print("Analyzing: ")
     for t in rsimd: #looping through each ticker and running the technical analysis
         print(t," ")
-        bs, nSells, dOff, nOpen, fundDat, lastClose, pAge = tickerTester(t,'max','rsimdvol',pyd) #calculate buy/sell signals and extract close prices
+        bs, nSells, dOff, nOpen, fundDat, lastClose, pAge, trades, perfDat = tickerTesterV2(t,'max',algo,pyd, cap) #calculate buy/sell signals and extract close prices
         try:
             if nOpen == 0: #if an open trade currently does NOT exist
-                perfDat = perfCalc(bs,nSells, cap)   
                 # print(perfDat) 
-                lastMove = perfDat[-3][-1]
                 # print(bs[-1])
-                sellDate = bs[-1][2]
-                cRSIMD.append([t,sellDate,round(lastMove[0][0],2),int(lastMove[1][0]),round(lastMove[2][0],2),round(lastMove[3][0],2)])
+                sellDate = bs["Date"][-1]
+                cRSIMD.append([t,sellDate,round(trades["NetChange"][-1],2),int(trades["pDiff"][-1]),round(trades["BuyPrice"][-1],2),round(trades["SellPrice"][-1],2)])
+                print(cRSIMD)
         except:
+            print("Skipped\n")
             pass
     pd.set_option('display.max_columns', None)  
     dfrsimd = pd.DataFrame(cRSIMD,columns = ['Stock','Date', 'Price Move', 'pDiff', 'Buy Price','Sell Price'])

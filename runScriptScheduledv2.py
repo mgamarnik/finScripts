@@ -1,16 +1,13 @@
 import os
 import numpy as np
-from tickerTester import tickerTester
+from tickerTesterV2 import tickerTesterV2
 import pandas as pd
-from procRes import procRes
-from perfCalc import perfCalc
-from scoreCalc import scoreCalc
 from finviz.screener import Screener
 from datetime import date
-import schedule
-import time
 from closeTesterScheduled import closeTester
 from sendEmail import sendEmail
+import schedule
+import time
 
 #Analysis Settings------------------------------------------------
 
@@ -20,12 +17,18 @@ def scheduledRunScript():
     # algo = 'rsimd'
     # algo = 'rsimd2' #rsi<32.5, diffrsi14>0, diffsma50<0, diffmdHist>0 (better score, better backtest performance, more trades, less reliable signals)
     # algo = 'rsimd3' #rsi<32.5, diffrsi14>0, diffsma50<0, mdLine>signalLine, mdLine<0, signalLine<0 (worse everything but more reliable signals)
+    
+
+
     algo = 'rsimdvol' 
     pyd = 1
     cap = 1
 
+    dfClose = closeTester(algo, pyd, cap)
+
+
     # Screener Filters
-    allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
+    allFilt = ['cap_largeover','geo_usa','ta_rsi_os40']
     # allFilt = ['cap_smallover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
     # allFilt = ['ind_aerospacedefense','geo_usa']
     # allFilt = ['cap_smallover','geo_usa','sec_consumerdefensive']
@@ -58,7 +61,7 @@ def scheduledRunScript():
     nSkipped = 0
     print("Analyzing %d stocks" % len(allTicks))
     for t in allTicks: #looping through each ticker and running the technical analysis
-        print(t," ")
+        print(t," ")            
         try: 
             bs, nSells, dOff, nOpen, fundDat, lastClose, pAge, trades, perfDat = tickerTesterV2(t,'max',algo,pyd, cap) #calculate buy/sell signals and extract close prices
             if len(bs)!=0 and nSells!=0:
@@ -99,7 +102,6 @@ def scheduledRunScript():
     print(restArr)
     restArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_REST.csv'))
 
-    dfClose = closeTester()
 
     sendEmail(openArr,dfClose)
 
@@ -109,7 +111,7 @@ schedule.every().tuesday.at("07:00").do(scheduledRunScript)
 schedule.every().wednesday.at("07:00").do(scheduledRunScript)
 schedule.every().thursday.at("07:00").do(scheduledRunScript)
 schedule.every().friday.at("07:00").do(scheduledRunScript)
-# schedule.every().sunday.at("17:36").do(scheduledRunScript)
+# # schedule.every().sunday.at("17:36").do(scheduledRunScript)
 
 while True:
     schedule.run_pending()

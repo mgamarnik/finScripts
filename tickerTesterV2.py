@@ -5,8 +5,10 @@ import yfinance as yf
 import numpy as np
 from diffPlus import diffPlus
 import math
+import warnings
 
 def tickerTesterV2(tkr,tFrame,key,pyd,cap):
+    warnings.filterwarnings("ignore")
 
     #ID Ticker of interest and pull data
     dat = yf.Ticker(tkr)
@@ -155,7 +157,7 @@ def tickerTesterV2(tkr,tFrame,key,pyd,cap):
 
 # OPEN CRITERIA-------------------------------------------------------------
             if (kstCOi == 1) & (kstSigi<0) & (dsma50i<0):
-                dateOpenMD = 1
+                dateOpenMD = openTol
             else:
                 dateOpenMD = 0
 
