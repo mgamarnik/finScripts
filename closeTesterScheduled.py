@@ -22,9 +22,10 @@ def closeTester(algo, pyd, cap):
             if nOpen == 0: #if an open trade currently does NOT exist
                 # print(perfDat) 
                 # print(bs[-1])
-                sellDate = bs["Date"][-1]
-                cRSIMD.append([t,sellDate,round(trades["NetChange"][-1],2),int(trades["pDiff"][-1]),round(trades["BuyPrice"][-1],2),round(trades["SellPrice"][-1],2)])
-                print(cRSIMD)
+                sellDate = bs.loc[len(bs)-1,"Date"]
+                lenT = len(trades)-1
+                cRSIMD.append([t,sellDate,round(trades.loc[lenT,"NetChange"],2),round(trades.loc[lenT,"pDiff"]*100,2),round(trades.loc[lenT,"BuyPrice"],2),round(trades.loc[lenT,"SellPrice"],2)])
+                # print(cRSIMD)
         except:
             print("Skipped\n")
             pass

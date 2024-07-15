@@ -28,7 +28,7 @@ def scheduledRunScript():
 
 
     # Screener Filters
-    allFilt = ['cap_largeover','geo_usa','ta_rsi_os40']
+    allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
     # allFilt = ['cap_smallover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
     # allFilt = ['ind_aerospacedefense','geo_usa']
     # allFilt = ['cap_smallover','geo_usa','sec_consumerdefensive']
@@ -82,6 +82,7 @@ def scheduledRunScript():
             nSkipped += 1
             pass
 
+    openArr = openArr.sort_values(by=['EarningP'],ascending=False)
     pd.set_option('display.max_columns', None)  
     pd.set_option('display.max_rows', None)  
     pd.set_option('display.expand_frame_repr', False)
@@ -111,7 +112,7 @@ schedule.every().tuesday.at("07:00").do(scheduledRunScript)
 schedule.every().wednesday.at("07:00").do(scheduledRunScript)
 schedule.every().thursday.at("07:00").do(scheduledRunScript)
 schedule.every().friday.at("07:00").do(scheduledRunScript)
-# # schedule.every().sunday.at("17:36").do(scheduledRunScript)
+# schedule.every().sunday.at("18:06").do(scheduledRunScript)
 
 while True:
     schedule.run_pending()
