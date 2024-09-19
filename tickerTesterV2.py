@@ -32,6 +32,7 @@ def tickerTesterV2(tkr,tFrame,key,pyd,cap):
     df['dMA200'] = diffPlus(sma200,1)
     df['MA50'] = sma50
     df['dMA50'] = diffPlus(sma50,5)
+    df['dMA50roc50'] = diffPlus(sma50,50)
     df['MA20'] = sma20
     df['dMA20'] = diffPlus(sma20,1)
     df['MA30'] = sma30 
@@ -59,7 +60,7 @@ def tickerTesterV2(tkr,tFrame,key,pyd,cap):
     dVolSma = ta.ema(df['Volume'],length = 50)
     dVolSma = diffPlus(dVolSma,50)
     # df['dVol'] = volDiff
-    df['dVol_MA30'] = dVolSma
+    df['dVol_MA50'] = dVolSma
 
 
     #RSI 14----------------------------------------------------------------------------------------------------------
@@ -126,9 +127,10 @@ def tickerTesterV2(tkr,tFrame,key,pyd,cap):
         #Pulling data for current close
         xri = df.loc[i,'rsi14']
         xmi = df.loc[i,'rsi14_dMA14']
-        vdi = df.loc[i,'dVol_MA30']
+        vdi = df.loc[i,'dVol_MA50']
         dsma30i = df.loc[i,'dMA30']
         sma50i = df.loc[i,'MA50']
+        dMA50roc50i = df.loc[i,'dMA50roc50']
         sma200i = df.loc[i,'MA200']
         dsma200i = df.loc[i,'dMA200']
         ema200i = df.loc[i,'eMA200']
@@ -226,6 +228,15 @@ def tickerTesterV2(tkr,tFrame,key,pyd,cap):
 
             logicSell = pPosS & s50TrS & (holdCrit == 1)
             if logicSell: holdCrit == 0
+
+        elif key == 'smavol':
+            
+            buyPos = vdi>0 and dMA50roc50i<0
+            logicBuy = buyPos & (cInv < pyd)            
+
+            sellPos = vdi<0 and dMA50roc50i>0
+            logicSell = sellPos & (cInv>0)            
+
 
         else:
             print("invalid key")

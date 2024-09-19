@@ -20,7 +20,8 @@ def scheduledRunScript():
     
 
 
-    algo = 'rsimdvol' 
+    # algo = 'rsimdvol' 
+    algo = 'smavol'
     pyd = 1
     cap = 1
 
@@ -28,7 +29,8 @@ def scheduledRunScript():
 
 
     # Screener Filters
-    allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
+    # allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
+    allFilt = ['cap_midover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
     # allFilt = ['cap_smallover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
     # allFilt = ['ind_aerospacedefense','geo_usa']
     # allFilt = ['cap_smallover','geo_usa','sec_consumerdefensive']
