@@ -231,11 +231,29 @@ def tickerTesterV2(tkr,tFrame,key,pyd,cap):
 
         elif key == 'smavol':
             
+
+            #Getting current price position
+            buyPrice = 0
+            if cInv>0:
+                buyPrice = bs.loc[len(bs)-1,"Price"]
+                posChange = closei/buyPrice-1 
+
+            #Volume Divergence Buy
             buyPos = vdi>0 and dMA50roc50i<0
             logicBuy = buyPos & (cInv < pyd)            
 
+            #Extended Hold Criteria 
+            if (closei>sma50i) & (dsma50i>0) & (dsma200i>0) & (cInv>0):
+                holdCrit = 1
+            if (closei<sma50i) & (dsma50i<0) & (holdCrit == 1) & (cInv>0):
+                holdCrit = 0
+
+            #Volume Divergence Sell with 30% max drawdown 
             sellPos = vdi<0 and dMA50roc50i>0
-            logicSell = sellPos & (cInv>0)            
+            logicSell = (sellPos or (posChange<=-0.3)) & (cInv>0)    
+
+            if holdCrit == 1:
+                logicSell = False
 
 
         else:
