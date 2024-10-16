@@ -1,6 +1,5 @@
 Open
 CRWD
-CTSH
-FAST
+MGRC
 NKE
 VMC

@@ -25,7 +25,7 @@ def scheduledRunScript():
     pyd = 1
     closeCap = 1
     inter = '1d'
-    tFrame = '5y'
+    tFrame = 'max'
     dfClose = closeTester(algo, pyd, closeCap,tFrame,inter)
 
 
