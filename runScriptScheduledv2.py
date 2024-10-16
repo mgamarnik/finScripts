@@ -124,8 +124,6 @@ def scheduledRunScript():
         print("\n Open Tickers: ----------------------------------------------------------------\n")
         print(openArr)
         openArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_OPEN.csv'))
-        mergedArr = pd.concat([openArr, newArr], ignore_index=True, sort=False)
-        mergedArr.to_csv(('./outs/' + 'lastOPEN.csv'))
 
 
     print("\n Rest Stats: ----------------------------------------------------------------\n")
@@ -134,6 +132,8 @@ def scheduledRunScript():
     print(restArr)
     restArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_REST.csv'))
 
+    mergedArr = pd.concat([openArr, newArr], ignore_index=True, sort=False)
+    mergedArr.to_csv(('./outs/' + 'lastOPEN.csv'))
 
 
     sendEmail(newArr,openArr,dfClose)
