@@ -71,7 +71,7 @@ def scheduledRunScript():
                 # score = scoreCalc(perfDat)
                 # activityFactor = round(perfDat[2]*perfDat[6]/pAge*100,2)
                 # earningPerc = round((perfDat[-1]-cap)/cap*100,2)
-                if nOpen > 0: #
+                if (nOpen > 0) and (dOff<perfDat[3]): #
                     #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price          earning percentage,       activity fact,     score]
                     openRow = {'Stock':t,'pprof':perfDat[0],'avgTradeP':perfDat[1],'nTrades':perfDat[2],'avgDays':perfDat[3],'openSeshs':dOff,'numOpen':nOpen,'Industry':fundDat[0],'Sector':fundDat[1],'MarketCap':fundDat[2],'Price':round(lastClose,2),'EarningP':round(perfDat[5],2)} #collecting outputted data into array
                     openArr.loc[len(openArr)] = openRow
