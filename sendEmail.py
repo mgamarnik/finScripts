@@ -1,6 +1,6 @@
 import smtplib
 
-def sendEmail(dfOpen, dfClose):
+def sendEmail(dfNew,dfOpen, dfClose):
 
     # sending results -----------------------------------------------------------------------------------------------
     YOUR_GOOGLE_EMAIL = 'mvg7486@gmail.com'  # The email you setup to send the email using app password
@@ -13,7 +13,7 @@ def sendEmail(dfOpen, dfClose):
 
     # Test send mail
     sent_from = YOUR_GOOGLE_EMAIL
-    email_text = str(dfClose) + "\n" + str(dfOpen) 
+    email_text = str(dfClose) + "\n" + str(dfNew) + "\n" + str(dfOpen)  
     email_subj = 'Todays Stocks'
     message = 'Subject: {}\n\n{}'.format(email_subj, email_text)
     smtpserver.sendmail(sent_from, sent_to, email_text)

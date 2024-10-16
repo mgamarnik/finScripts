@@ -7,14 +7,14 @@ from diffPlus import diffPlus
 import math
 import warnings
 
-def tickerTesterV2(tkr,tFrame,key,pyd,cap):
+def tickerTesterV2(tkr,tFrame,inter,key,pyd,cap):
     warnings.filterwarnings("ignore")
 
     #ID Ticker of interest and pull data
     dat = yf.Ticker(tkr)
     dInfo = dat.info #Ticker info
     # print(dInfo)
-    df = dat.history(period = tFrame, interval = '1d') #Ticker Dataframe
+    df = dat.history(period = tFrame, interval = inter) #Ticker Dataframe
 
     #Dataframe of close prices
     closes = df['Close']

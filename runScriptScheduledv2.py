@@ -23,14 +23,15 @@ def scheduledRunScript():
     # algo = 'rsimdvol' 
     algo = 'smavol'
     pyd = 1
-    cap = 1
-
-    dfClose = closeTester(algo, pyd, cap)
+    closeCap = 1
+    inter = '1d'
+    tFrame = '5y'
+    dfClose = closeTester(algo, pyd, closeCap,tFrame,inter)
 
 
     # Screener Filters
-    # allFilt = ['cap_smallover','geo_usa','ta_rsi_os40']
-    allFilt = ['cap_midover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
+    # allFilt = ['cap_largeover','geo_usa','ta_rsi_os40']
+    allFilt = ['cap_midover', 'geo_usa','ta_highlow52w_a0to10h'] #USA, Small Over Marketcap, 0-10% above 52week low
     # allFilt = ['cap_smallover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
     # allFilt = ['ind_aerospacedefense','geo_usa']
     # allFilt = ['cap_smallover','geo_usa','sec_consumerdefensive']
@@ -57,22 +58,34 @@ def scheduledRunScript():
     # print(len(allTicks))
 
     #Initialize arrays 
+    newArr = pd.DataFrame({'Stock':[], 'pprof':[], 'avgTradeP':[], 'nTrades':[],'avgDays':[],'openSeshs':[],'numOpen':[],'Industry':[],'Sector':[], 'MarketCap':[], 'Price':[], 'EarningP':[]}) #analyzed with trades still open
     openArr = pd.DataFrame({'Stock':[], 'pprof':[], 'avgTradeP':[], 'nTrades':[],'avgDays':[],'openSeshs':[],'numOpen':[],'Industry':[],'Sector':[], 'MarketCap':[], 'Price':[], 'EarningP':[]}) #analyzed with trades still open
     restArr = pd.DataFrame({'Stock':[], 'pprof':[], 'avgTradeP':[], 'nTrades':[],'avgDays':[],'openSeshs':[],'numOpen':[],'Industry':[],'Sector':[], 'MarketCap':[], 'Price':[], 'EarningP':[]})
     cap = 100
     nSkipped = 0
+    oldDat = pd.read_csv(('./outs/' + 'lastOPEN.csv'))
     print("Analyzing %d stocks" % len(allTicks))
     for t in allTicks: #looping through each ticker and running the technical analysis
         print(t," ")            
         try: 
-            bs, nSells, dOff, nOpen, fundDat, lastClose, pAge, trades, perfDat = tickerTesterV2(t,'max',algo,pyd, cap) #calculate buy/sell signals and extract close prices
+            bs, nSells, dOff, nOpen, fundDat, lastClose, pAge, trades, perfDat = tickerTesterV2(t,tFrame,inter,algo,pyd, cap) #calculate buy/sell signals and extract close prices
             if len(bs)!=0 and nSells!=0:
                 # perfDat = perfCalcV2(bs,nSells, cap)    
                 # score = scoreCalc(perfDat)
                 # activityFactor = round(perfDat[2]*perfDat[6]/pAge*100,2)
                 # earningPerc = round((perfDat[-1]-cap)/cap*100,2)
-                if (nOpen > 0) and (dOff<perfDat[3]): #
+                isNew = True
+                for oldT in oldDat['Stock']:
+                    if t == oldT:
+                        isNew = False
+                        break
+
+                if (nOpen > 0) and (dOff<perfDat[3]) and isNew: #
                     #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price          earning percentage,       activity fact,     score]
+                    newRow = {'Stock':t,'pprof':perfDat[0],'avgTradeP':perfDat[1],'nTrades':perfDat[2],'avgDays':perfDat[3],'openSeshs':dOff,'numOpen':nOpen,'Industry':fundDat[0],'Sector':fundDat[1],'MarketCap':fundDat[2],'Price':round(lastClose,2),'EarningP':round(perfDat[5],2)} #collecting outputted data into array
+                    newArr.loc[len(newArr)] = newRow
+                elif (nOpen > 0) and (dOff<perfDat[3]):
+                                 #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price          earning percentage,       activity fact,     score]
                     openRow = {'Stock':t,'pprof':perfDat[0],'avgTradeP':perfDat[1],'nTrades':perfDat[2],'avgDays':perfDat[3],'openSeshs':dOff,'numOpen':nOpen,'Industry':fundDat[0],'Sector':fundDat[1],'MarketCap':fundDat[2],'Price':round(lastClose,2),'EarningP':round(perfDat[5],2)} #collecting outputted data into array
                     openArr.loc[len(openArr)] = openRow
                 else:
@@ -84,12 +97,25 @@ def scheduledRunScript():
             nSkipped += 1
             pass
 
+    newArr = newArr.sort_values(by=['openSeshs'],ascending=True)
+    openArr = openArr.sort_values(by=['openSeshs'],ascending=True)
     openArr = openArr.sort_values(by=['EarningP'],ascending=False)
+
     pd.set_option('display.max_columns', None)  
     pd.set_option('display.max_rows', None)  
     pd.set_option('display.expand_frame_repr', False)
 
     print("%d stocks skipped\n" % nSkipped)
+    if len(newArr) == 0:
+        print("\n No New Tickers: ----------------------------------------------------------------\n")
+    else:
+        print("\n New Stats: ----------------------------------------------------------------\n")
+        print("avgPProf: ",newArr['pprof'].mean().round(2),"avgTradeP: ",newArr['avgTradeP'].mean().round(2),"avgNTrades: ",newArr['nTrades'].mean().round(2),"avgDays: ", newArr['avgDays'].mean().round(2), "avgEarningP: ", newArr['EarningP'].mean().round(2))
+        print("\n New Tickers: ----------------------------------------------------------------\n")
+        print(newArr)
+        newArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_NEW.csv'))
+
+
     if len(openArr) == 0:
         print("\n No Open Tickers: ----------------------------------------------------------------\n")
     else:
@@ -98,6 +124,9 @@ def scheduledRunScript():
         print("\n Open Tickers: ----------------------------------------------------------------\n")
         print(openArr)
         openArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_OPEN.csv'))
+        mergedArr = pd.concat([openArr, newArr], ignore_index=True, sort=False)
+        mergedArr.to_csv(('./outs/' + 'lastOPEN.csv'))
+
 
     print("\n Rest Stats: ----------------------------------------------------------------\n")
     print("avgPProf: ",restArr['pprof'].mean().round(2),"avgTradeP: ",restArr['avgTradeP'].mean().round(2),"avgNTrades: ",restArr['nTrades'].mean().round(2),"avgDays: ", restArr['avgDays'].mean().round(2), "avgEarningP: ", restArr['EarningP'].mean().round(2))
@@ -106,7 +135,8 @@ def scheduledRunScript():
     restArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_REST.csv'))
 
 
-    sendEmail(openArr,dfClose)
+
+    sendEmail(newArr,openArr,dfClose)
 
 
 schedule.every().monday.at("07:00").do(scheduledRunScript)
@@ -114,7 +144,7 @@ schedule.every().tuesday.at("07:00").do(scheduledRunScript)
 schedule.every().wednesday.at("07:00").do(scheduledRunScript)
 schedule.every().thursday.at("07:00").do(scheduledRunScript)
 schedule.every().friday.at("07:00").do(scheduledRunScript)
-# schedule.every().sunday.at("18:06").do(scheduledRunScript)
+# schedule.every().tuesday.at("21:59").do(scheduledRunScript)
 
 while True:
     schedule.run_pending()

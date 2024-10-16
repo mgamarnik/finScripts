@@ -1,0 +1,21 @@
+,Stock,pprof,avgTradeP,nTrades,avgDays,openSeshs,numOpen,Industry,Sector,MarketCap,Price,EarningP
+0,ALGN,43.0,5.0,7,58.0,90.0,1,Medical Instruments & Supplies,Healthcare,16.37,219.15,-17.62
+1,AMH,80.0,10.0,5,105.0,97.0,0,REIT - Residential,Real Estate,15.67,37.5,54.66
+2,BMRN,62.0,4.0,8,88.0,21.0,0,Biotechnology,Healthcare,13.414,70.46,23.17
+3,CNC,56.99999999999999,5.0,7,107.0,3.0,0,Healthcare Plans,Healthcare,36.023,68.48,38.26
+4,CUBE,75.0,12.0,4,118.0,158.0,0,REIT - Industrial,Real Estate,11.329,50.03,56.81
+5,ELV,75.0,18.0,4,135.0,69.0,0,Healthcare Plans,Healthcare,112.203,483.87,89.03
+6,ENPH,43.0,-12.0,7,67.0,81.0,1,Solar,Technology,12.464,92.04,-68.73
+7,FSLR,80.0,41.0,5,143.0,48.0,0,Solar,Technology,21.621,201.98,275.47
+8,HSY,67.0,6.0,3,154.0,101.0,0,Confectioners,Consumer Defensive,37.288,184.33,14.75
+9,IDXX,50.0,2.0,6,72.0,114.0,1,Diagnostics & Research,Healthcare,39.006,473.92,-8.61
+10,INVH,100.0,28.000000000000004,3,265.0,97.0,0,REIT - Residential,Real Estate,20.497,33.46,107.94
+11,KLAC,100.0,27.0,2,151.0,238.0,1,Semiconductor Equipment & Materials,Technology,94.817,707.72,61.86
+12,MAA,60.0,1.0,5,93.0,154.0,0,REIT - Residential,Real Estate,18.315,152.66,0.33
+13,RBLX,40.0,2.0,5,62.0,109.0,1,Electronic Gaming & Multimedia,Communication Services,26.379,40.76,-24.21
+14,REGN,50.0,3.0,6,88.0,132.0,0,Biotechnology,Healthcare,112.057,1016.53,15.04
+15,REXR,40.0,1.0,5,141.0,5.0,0,REIT - Industrial,Real Estate,10.774,47.75,-1.99
+16,RIVN,80.0,28.999999999999996,5,84.0,43.0,0,Auto Manufacturers,Consumer Cyclical,10.234,10.15,166.1
+17,TSLA,40.0,9.0,5,109.0,125.0,0,Auto Manufacturers,Consumer Cyclical,701.447,219.57,6.75
+18,UNH,75.0,12.0,4,130.0,169.0,1,Healthcare Plans,Healthcare,513.688,556.29,52.78
+19,WPC,80.0,11.0,5,169.0,170.0,0,REIT - Diversified,Real Estate,13.037,59.57,59.16

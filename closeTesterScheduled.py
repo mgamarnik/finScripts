@@ -3,7 +3,7 @@ from tickerTesterV2 import tickerTesterV2
 import pandas as pd
 
 #Close tester
-def closeTester(algo, pyd, cap):
+def closeTester(algo, pyd, cap,tFrame,inter):
     # Pull Tickers
     tkrs = pd.read_csv("open.txt")
     # print(tkrs)
@@ -17,7 +17,7 @@ def closeTester(algo, pyd, cap):
     print("Analyzing: ")
     for t in rsimd: #looping through each ticker and running the technical analysis
         print(t," ")
-        bs, nSells, dOff, nOpen, fundDat, lastClose, pAge, trades, perfDat = tickerTesterV2(t,'max',algo,pyd, cap) #calculate buy/sell signals and extract close prices
+        bs, nSells, dOff, nOpen, fundDat, lastClose, pAge, trades, perfDat = tickerTesterV2(t,tFrame,inter,algo,pyd, cap) #calculate buy/sell signals and extract close prices
         try:
             if nOpen == 0: #if an open trade currently does NOT exist
                 # print(perfDat) 
