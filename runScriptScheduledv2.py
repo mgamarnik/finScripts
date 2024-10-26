@@ -59,9 +59,9 @@ def scheduledRunScript():
     # print(len(allTicks))
 
     #Initialize arrays 
-    newArr = pd.DataFrame({'Stock':[], 'pprof':[], 'avgTradeP':[], 'nTrades':[],'avgDays':[],'openSeshs':[],'numOpen':[],'Industry':[],'Sector':[], 'MarketCap':[], 'Price':[], 'EarningP':[]}) #analyzed with trades still open
-    openArr = pd.DataFrame({'Stock':[], 'pprof':[], 'avgTradeP':[], 'nTrades':[],'avgDays':[],'openSeshs':[],'numOpen':[],'Industry':[],'Sector':[], 'MarketCap':[], 'Price':[], 'EarningP':[]}) #analyzed with trades still open
-    restArr = pd.DataFrame({'Stock':[], 'pprof':[], 'avgTradeP':[], 'nTrades':[],'avgDays':[],'openSeshs':[],'numOpen':[],'Industry':[],'Sector':[], 'MarketCap':[], 'Price':[], 'EarningP':[]})
+    newArr = pd.DataFrame({'Stock':[], 'pprof':[], 'avgTradeP':[], 'nTrades':[],'avgDays':[],'openSeshs':[],'numOpen':[],'Industry':[],'Sector':[], 'MarketCap':[], 'Price':[], 'EarningP':[],'MarketBeat':[]}) #analyzed with trades still open
+    openArr = pd.DataFrame({'Stock':[], 'pprof':[], 'avgTradeP':[], 'nTrades':[],'avgDays':[],'openSeshs':[],'numOpen':[],'Industry':[],'Sector':[], 'MarketCap':[], 'Price':[], 'EarningP':[],'MarketBeat':[]}) #analyzed with trades still open
+    restArr = pd.DataFrame({'Stock':[], 'pprof':[], 'avgTradeP':[], 'nTrades':[],'avgDays':[],'openSeshs':[],'numOpen':[],'Industry':[],'Sector':[], 'MarketCap':[], 'Price':[], 'EarningP':[],'MarketBeat':[]})
     cap = 100
     nSkipped = 0
     oldDat = pd.read_csv(('./outs/' + 'lastOpen.csv'))
@@ -83,15 +83,15 @@ def scheduledRunScript():
 
                 if (nOpen > 0) and (dOff<perfDat[3]) and isNew: #
                     #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price          earning percentage,       activity fact,     score]
-                    newRow = {'Stock':t,'pprof':perfDat[0],'avgTradeP':perfDat[1],'nTrades':perfDat[2],'avgDays':perfDat[3],'openSeshs':dOff,'numOpen':nOpen,'Industry':fundDat[0],'Sector':fundDat[1],'MarketCap':fundDat[2],'Price':round(lastClose,2),'EarningP':round(perfDat[5],2)} #collecting outputted data into array
+                    newRow = {'Stock':t,'pprof':perfDat[0],'avgTradeP':perfDat[1],'nTrades':perfDat[2],'avgDays':perfDat[3],'openSeshs':dOff,'numOpen':nOpen,'Industry':fundDat[0],'Sector':fundDat[1],'MarketCap':fundDat[2],'Price':round(lastClose,2),'EarningP':round(perfDat[5],2),'MarketBeat':round(marketBeat,2)} #collecting outputted data into array
                     newArr.loc[len(newArr)] = newRow
                 elif (nOpen > 0) and (dOff<perfDat[3]):
                                  #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price          earning percentage,       activity fact,     score]
-                    openRow = {'Stock':t,'pprof':perfDat[0],'avgTradeP':perfDat[1],'nTrades':perfDat[2],'avgDays':perfDat[3],'openSeshs':dOff,'numOpen':nOpen,'Industry':fundDat[0],'Sector':fundDat[1],'MarketCap':fundDat[2],'Price':round(lastClose,2),'EarningP':round(perfDat[5],2)} #collecting outputted data into array
+                    openRow = {'Stock':t,'pprof':perfDat[0],'avgTradeP':perfDat[1],'nTrades':perfDat[2],'avgDays':perfDat[3],'openSeshs':dOff,'numOpen':nOpen,'Industry':fundDat[0],'Sector':fundDat[1],'MarketCap':fundDat[2],'Price':round(lastClose,2),'EarningP':round(perfDat[5],2),'MarketBeat':round(marketBeat,2)} #collecting outputted data into array
                     openArr.loc[len(openArr)] = openRow
                 else:
                     #               [t, %prof,    avgTrade,   ntrades,  avgOpenDays,dOff, nopen, industry,   sector,     marketCap,  price              realAvg,        ntFact,     score]
-                    restRow = {'Stock':t,'pprof':perfDat[0],'avgTradeP':perfDat[1],'nTrades':perfDat[2],'avgDays':perfDat[3],'openSeshs':dOff,'numOpen':nOpen,'Industry':fundDat[0],'Sector':fundDat[1],'MarketCap':fundDat[2],'Price':round(lastClose,2),'EarningP':round(perfDat[5],2)} #collecting outputted data into array
+                    restRow = {'Stock':t,'pprof':perfDat[0],'avgTradeP':perfDat[1],'nTrades':perfDat[2],'avgDays':perfDat[3],'openSeshs':dOff,'numOpen':nOpen,'Industry':fundDat[0],'Sector':fundDat[1],'MarketCap':fundDat[2],'Price':round(lastClose,2),'EarningP':round(perfDat[5],2),'MarketBeat':round(marketBeat,2)} #collecting outputted data into array
                     restArr.loc[len(restArr)] = restRow
         except:
             print("Skipped")

@@ -307,6 +307,10 @@ def tickerTesterV2(tkr,tFrame,inter,key,pyd,cap):
         while int(bs.loc[len(bs)+lInd,["Signal"]].iloc[0])==0:
             lInd -= 1
 
+
+    #Stock performance against market
+    pDiffs = baseline(bs,'^gspc',tFrame)
+    marketBeat = sum(np.ceil(pDiffs/max(abs(pDiffs))))/len(pDiffs)
     
     mk = 0
     fundData = []
@@ -315,6 +319,6 @@ def tickerTesterV2(tkr,tFrame,inter,key,pyd,cap):
         fundData = [dInfo['industry'], dInfo['sector'], round(dInfo['marketCap']/10**9,3), dInfo['previousClose']]
     
      #buy/sell matrix, number of sell signals, days since last buy/sell, number of open buys, ticker fundamental data, last close price, number of days analyzed, trades df, performance arr
-    return bs,                  nSells,          dOffset,                     abs(lInd+1),      fundData,               closes[-1],         len(closes),           trades,   perfDat
+    return bs,                  nSells,          dOffset,                     abs(lInd+1),      fundData,               closes[-1],         marketBeat,           trades,   perfDat
 
 
