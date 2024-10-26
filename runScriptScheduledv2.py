@@ -31,7 +31,8 @@ def scheduledRunScript():
 
     # Screener Filters
     # allFilt = ['cap_largeover','geo_usa','ta_rsi_os40']
-    allFilt = ['cap_midover', 'geo_usa','ta_highlow52w_a0to10h'] #USA, Small Over Marketcap, 0-10% above 52week low
+    allFilt = ['cap_largeover','geo_usa']
+    # allFilt = ['cap_midover', 'geo_usa','ta_highlow52w_a0to10h'] #USA, Small Over Marketcap, 0-10% above 52week low
     # allFilt = ['cap_smallover', 'geo_usa','ta_highlow52w_a0to5h'] #USA, Small Over Marketcap, 0-5% above 52week low
     # allFilt = ['ind_aerospacedefense','geo_usa']
     # allFilt = ['cap_smallover','geo_usa','sec_consumerdefensive']
@@ -63,7 +64,7 @@ def scheduledRunScript():
     restArr = pd.DataFrame({'Stock':[], 'pprof':[], 'avgTradeP':[], 'nTrades':[],'avgDays':[],'openSeshs':[],'numOpen':[],'Industry':[],'Sector':[], 'MarketCap':[], 'Price':[], 'EarningP':[]})
     cap = 100
     nSkipped = 0
-    oldDat = pd.read_csv(('./outs/' + 'lastOPEN.csv'))
+    oldDat = pd.read_csv(('./outs/' + 'lastOpen.csv'))
     print("Analyzing %d stocks" % len(allTicks))
     for t in allTicks: #looping through each ticker and running the technical analysis
         print(t," ")            
@@ -113,7 +114,8 @@ def scheduledRunScript():
         print("avgPProf: ",newArr['pprof'].mean().round(2),"avgTradeP: ",newArr['avgTradeP'].mean().round(2),"avgNTrades: ",newArr['nTrades'].mean().round(2),"avgDays: ", newArr['avgDays'].mean().round(2), "avgEarningP: ", newArr['EarningP'].mean().round(2))
         print("\n New Tickers: ----------------------------------------------------------------\n")
         print(newArr)
-        newArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_NEW.csv'))
+        # newArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_NEW.csv'))
+        newArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_NEW.csv'))
 
 
     if len(openArr) == 0:
@@ -123,17 +125,21 @@ def scheduledRunScript():
         print("avgPProf: ",openArr['pprof'].mean().round(2),"avgTradeP: ",openArr['avgTradeP'].mean().round(2),"avgNTrades: ",openArr['nTrades'].mean().round(2),"avgDays: ", openArr['avgDays'].mean().round(2), "avgEarningP: ", openArr['EarningP'].mean().round(2))
         print("\n Open Tickers: ----------------------------------------------------------------\n")
         print(openArr)
-        openArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_OPEN.csv'))
+        # openArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_OPEN.csv'))
+        openArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_OPEN.csv'))
 
 
     print("\n Rest Stats: ----------------------------------------------------------------\n")
     print("avgPProf: ",restArr['pprof'].mean().round(2),"avgTradeP: ",restArr['avgTradeP'].mean().round(2),"avgNTrades: ",restArr['nTrades'].mean().round(2),"avgDays: ", restArr['avgDays'].mean().round(2), "avgEarningP: ", restArr['EarningP'].mean().round(2))
     print("\n Rest of Tickers: ----------------------------------------------------------------\n")
     print(restArr)
-    restArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_REST.csv'))
+    # restArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] + '_' + allFilt[2] + '_REST.csv'))
+    restArr.to_csv(('./outs/' + algo + '_' + tdyDT + '_' + allFilt[0] + '_' + allFilt[1] +'_REST.csv'))
+
+
 
     mergedArr = pd.concat([openArr, newArr], ignore_index=True, sort=False)
-    mergedArr.to_csv(('./outs/' + 'lastOPEN.csv'))
+    mergedArr.to_csv(('./outs/' + 'lastOpen.csv'))
 
 
     sendEmail(newArr,openArr,dfClose)
@@ -144,7 +150,7 @@ schedule.every().tuesday.at("07:00").do(scheduledRunScript)
 schedule.every().wednesday.at("07:00").do(scheduledRunScript)
 schedule.every().thursday.at("07:00").do(scheduledRunScript)
 schedule.every().friday.at("07:00").do(scheduledRunScript)
-# schedule.every().tuesday.at("21:59").do(scheduledRunScript)
+# schedule.every().wednesday.at("07:54").do(scheduledRunScript)
 
 while True:
     schedule.run_pending()
