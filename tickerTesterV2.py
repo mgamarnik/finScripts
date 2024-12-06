@@ -6,6 +6,7 @@ import numpy as np
 from diffPlus import diffPlus
 import math
 import warnings
+from baselineComp import baseline
 
 def tickerTesterV2(tkr,tFrame,inter,key,pyd,cap):
     warnings.filterwarnings("ignore")

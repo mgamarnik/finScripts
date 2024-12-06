@@ -69,7 +69,7 @@ def scheduledRunScript():
     for t in allTicks: #looping through each ticker and running the technical analysis
         print(t," ")            
         try: 
-            bs, nSells, dOff, nOpen, fundDat, lastClose, pAge, trades, perfDat = tickerTesterV2(t,tFrame,inter,algo,pyd, cap) #calculate buy/sell signals and extract close prices
+            bs, nSells, dOff, nOpen, fundDat, lastClose, marketBeat, trades, perfDat = tickerTesterV2(t,tFrame,inter,algo,pyd, cap) #calculate buy/sell signals and extract close prices
             if len(bs)!=0 and nSells!=0:
                 # perfDat = perfCalcV2(bs,nSells, cap)    
                 # score = scoreCalc(perfDat)
@@ -150,7 +150,7 @@ schedule.every().tuesday.at("07:00").do(scheduledRunScript)
 schedule.every().wednesday.at("07:00").do(scheduledRunScript)
 schedule.every().thursday.at("07:00").do(scheduledRunScript)
 schedule.every().friday.at("07:00").do(scheduledRunScript)
-# schedule.every().wednesday.at("07:54").do(scheduledRunScript)
+# schedule.every().saturday.at("12:13").do(scheduledRunScript)
 
 while True:
     schedule.run_pending()
